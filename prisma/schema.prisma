@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum InquirySource {
+  CONTACT_FORM
+  CHATBOT
+}
+
+enum InquiryStatus {
+  NEW
+  ANSWERED
+  ARCHIVED
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  organization String?
+  role         Role     @default(USER)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  documents Document[]
+}
+
+model Document {
+  id           String   @id @default(cuid())
+  filename     String
+  mimeType     String
+  charCount    Int
+  chunkCount   Int
+  uploadedBy   User?    @relation(fields: [uploadedById], references: [id], onDelete: SetNull)
+  uploadedById String?
+  createdAt    DateTime @default(now())
+
+  chunks KnowledgeChunk[]
+}
+
+model KnowledgeChunk {
+  id         String   @id @default(cuid())
+  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  documentId String
+  chunkIndex Int
+  content    String
+  embedding  Float[]
+  createdAt  DateTime @default(now())
+
+  @@index([documentId])
+}
+
+model Inquiry {
+  id           String        @id @default(cuid())
+  name         String
+  email        String
+  organization String?
+  message      String
+  context      String?
+  source       InquirySource @default(CONTACT_FORM)
+  status       InquiryStatus @default(NEW)
+  createdAt    DateTime      @default(now())
+}

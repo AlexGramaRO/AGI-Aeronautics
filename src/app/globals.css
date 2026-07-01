@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #03050a;
+  color: #eaf3ff;
+}
+
+::selection {
+  background: rgba(62, 230, 255, 0.35);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050914;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #133056;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a4478;
+}
+
+.hud-panel {
+  background: linear-gradient(180deg, rgba(12, 22, 43, 0.85), rgba(5, 9, 20, 0.9));
+  border: 1px solid rgba(62, 230, 255, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.hud-panel::before {
+  content: "";
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #3ee6ff 0%, #6f9dff 45%, #a78bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-overlay {
+  background-image: linear-gradient(rgba(62, 230, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(62, 230, 255, 0.07) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 85%);
+}
+
+.corner-brackets {
+  position: relative;
+}
+
+.corner-brackets::before,
+.corner-brackets::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: rgba(62, 230, 255, 0.7);
+}
+
+.corner-brackets::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.corner-brackets::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.animate-blink {
+  animation: blink 1.6s ease-in-out infinite;
+}
