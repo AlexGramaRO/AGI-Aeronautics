@@ -8,7 +8,12 @@ export const runtime = "nodejs";
 export const maxDuration = 60;
 
 const NO_ANSWER_TOKEN = "NOT_IN_KNOWLEDGE_BASE";
-const SIMILARITY_THRESHOLD = 0.72;
+// text-embedding-3-small cosine similarity for genuinely relevant text typically
+// falls in the ~0.3-0.6 range (rarely higher) - this is a low sanity floor to
+// weed out completely unrelated chunks, not a strict relevance gate. The AI
+// model itself (via the NO_ANSWER_TOKEN instruction below) makes the real call
+// on whether the retrieved context actually answers the question.
+const SIMILARITY_THRESHOLD = 0.2;
 const TOP_K = 6;
 
 const schema = z.object({
