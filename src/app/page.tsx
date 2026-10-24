@@ -136,11 +136,11 @@ export default function HomePage() {
                 ))}
               </div>
               <Image
-                src="/logo/agi-logo.png"
+                src="/logo/agi-mark.png"
                 alt=""
-                width={64}
-                height={64}
-                className="absolute bottom-4 right-4 h-10 w-auto opacity-40 brightness-0 invert"
+                width={662}
+                height={662}
+                className="absolute bottom-4 right-4 h-12 w-12 opacity-70 brightness-0 invert"
               />
             </div>
           </div>

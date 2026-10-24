@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   description:
     "AGI Aeronautics builds AITC, a futuristic, AI-augmented, web-based air traffic control simulator platform for training and research.",
   icons: {
-    icon: "/logo/agi-logo.png",
+    icon: "/logo/agi-mark.png",
   },
 };
 

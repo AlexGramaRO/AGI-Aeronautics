@@ -7,13 +7,15 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row">
           <div>
-            <Image
-              src="/logo/agi-logo.png"
-              alt="AGI Aeronautics"
-              width={160}
-              height={40}
-              className="h-8 w-auto brightness-0 invert opacity-90"
-            />
+            <span className="inline-flex rounded-lg bg-white px-3 py-2">
+              <Image
+                src="/logo/agi-logo.png"
+                alt="AGI Aeronautics"
+                width={1370}
+                height={652}
+                className="h-14 w-auto"
+              />
+            </span>
             <p className="mt-4 max-w-sm font-mono text-xs leading-relaxed text-slate-500">
               AGI AERONAUTICS &mdash; INTELLIGENCE FOR AVIATION.
               <br />

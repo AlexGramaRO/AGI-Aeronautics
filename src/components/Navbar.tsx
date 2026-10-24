@@ -26,15 +26,17 @@ export default function Navbar({ user }: { user: SessionPayload | null }) {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-cyan-glow/10 bg-void-950/70 backdrop-blur-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/logo/agi-logo.png"
-            alt="AGI Aeronautics"
-            width={160}
-            height={40}
-            className="h-9 w-auto brightness-0 invert"
-            priority
-          />
+        <Link href="/" className="flex items-center">
+          <span className="inline-flex rounded-lg bg-white p-1">
+            <Image
+              src="/logo/agi-mark.png"
+              alt="AGI Aeronautics"
+              width={662}
+              height={662}
+              className="h-9 w-9"
+              priority
+            />
+          </span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
