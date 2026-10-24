@@ -9,7 +9,7 @@ import type { SessionPayload } from "@/lib/auth";
 const NAV_LINKS = [
   { href: "/#platform", label: "Platform" },
   { href: "/#features", label: "Capabilities" },
-  { href: "/#simulator", label: "Simulator" },
+  { href: "/#simulator", label: "Devices" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -24,125 +24,87 @@ export default function Navbar({ user }: { user: SessionPayload | null }) {
   }
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-cyan-glow/10 bg-void-950/70 backdrop-blur-lg">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <Link href="/" className="flex items-center">
-          <span className="inline-flex rounded-lg bg-white p-1">
-            <Image
-              src="/logo/agi-mark.png"
-              alt="AGI Aeronautics"
-              width={662}
-              height={662}
-              className="h-9 w-9"
-              priority
-            />
-          </span>
+    <header className="fixed top-0 z-50 w-full border-b border-black/10 bg-white/80 backdrop-blur-xl">
+      <nav className="mx-auto flex h-12 max-w-6xl items-center justify-between px-5">
+        <Link href="/" className="flex items-center gap-2" aria-label="AGI Aeronautics">
+          <Image src="/logo/agi-mark.png" alt="" width={662} height={662} className="h-7 w-7" priority />
+          <span className="text-[15px] font-medium tracking-tight text-ink">AGI</span>
         </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-7 md:flex">
           {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="font-mono text-xs uppercase tracking-widest text-slate-300 transition hover:text-cyan-glow"
-            >
+            <Link key={link.href} href={link.href} className="text-[12px] text-ink/80 transition hover:text-ink">
               {link.label}
             </Link>
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-5 md:flex">
           {user ? (
             <>
               {user.role === "ADMIN" && (
-                <Link
-                  href="/admin"
-                  className="rounded-md border border-cyan-glow/30 px-4 py-2 font-mono text-xs uppercase tracking-widest text-cyan-glow transition hover:bg-cyan-glow/10"
-                >
+                <Link href="/admin" className="text-[12px] text-ink/80 hover:text-ink">
                   Admin
                 </Link>
               )}
-              <Link
-                href="/dashboard"
-                className="rounded-md border border-cyan-glow/30 px-4 py-2 font-mono text-xs uppercase tracking-widest text-slate-200 transition hover:bg-cyan-glow/10"
-              >
+              <Link href="/dashboard" className="text-[12px] text-ink/80 hover:text-ink">
                 Dashboard
               </Link>
-              <button
-                onClick={handleLogout}
-                className="rounded-md bg-gradient-to-r from-accent-blue to-accent-cyan px-4 py-2 font-mono text-xs uppercase tracking-widest text-void-950 shadow-glow-sm transition hover:opacity-90"
-              >
+              <button onClick={handleLogout} className="text-[12px] text-[#0066cc]">
                 Sign out
               </button>
             </>
           ) : (
             <>
-              <Link
-                href="/login"
-                className="rounded-md border border-cyan-glow/30 px-4 py-2 font-mono text-xs uppercase tracking-widest text-slate-200 transition hover:bg-cyan-glow/10"
-              >
+              <Link href="/login" className="text-[12px] text-ink/80 hover:text-ink">
                 Log in
               </Link>
-              <Link
-                href="/register"
-                className="rounded-md bg-gradient-to-r from-accent-blue to-accent-cyan px-4 py-2 font-mono text-xs uppercase tracking-widest text-void-950 shadow-glow-sm transition hover:opacity-90"
-              >
+              <Link href="/register" className="text-[12px] text-[#0066cc]">
                 Get access
               </Link>
             </>
           )}
         </div>
 
-        <button
-          className="text-slate-200 md:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <button className="text-ink md:hidden" onClick={() => setOpen((v) => !v)} aria-label="Toggle menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
           </svg>
         </button>
       </nav>
 
       {open && (
-        <div className="border-t border-cyan-glow/10 bg-void-950 px-6 py-4 md:hidden">
-          <div className="flex flex-col gap-4">
+        <div className="border-t border-black/10 bg-white px-5 py-4 md:hidden">
+          <div className="flex flex-col gap-3">
             {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="font-mono text-sm uppercase tracking-widest text-slate-300"
-              >
+              <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="text-[17px] text-ink">
                 {link.label}
               </Link>
             ))}
-            <div className="mt-2 flex flex-col gap-2">
-              {user ? (
-                <>
-                  {user.role === "ADMIN" && (
-                    <Link href="/admin" className="rounded-md border border-cyan-glow/30 px-4 py-2 text-center text-sm text-cyan-glow">
-                      Admin
-                    </Link>
-                  )}
-                  <Link href="/dashboard" className="rounded-md border border-cyan-glow/30 px-4 py-2 text-center text-sm text-slate-200">
-                    Dashboard
+            {user ? (
+              <>
+                {user.role === "ADMIN" && (
+                  <Link href="/admin" className="text-[17px] text-ink">
+                    Admin
                   </Link>
-                  <button onClick={handleLogout} className="rounded-md bg-accent-blue px-4 py-2 text-center text-sm text-white">
-                    Sign out
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link href="/login" className="rounded-md border border-cyan-glow/30 px-4 py-2 text-center text-sm text-slate-200">
-                    Log in
-                  </Link>
-                  <Link href="/register" className="rounded-md bg-accent-blue px-4 py-2 text-center text-sm text-white">
-                    Get access
-                  </Link>
-                </>
-              )}
-            </div>
+                )}
+                <Link href="/dashboard" className="text-[17px] text-ink">
+                  Dashboard
+                </Link>
+                <button onClick={handleLogout} className="text-left text-[17px] text-[#0066cc]">
+                  Sign out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link href="/login" className="text-[17px] text-ink">
+                  Log in
+                </Link>
+                <Link href="/register" className="text-[17px] text-[#0066cc]">
+                  Get access
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

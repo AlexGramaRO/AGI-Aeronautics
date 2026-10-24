@@ -11,7 +11,7 @@ type Message = {
 const INTRO: Message = {
   role: "assistant",
   content:
-    "Systems online. I'm the AGI Aeronautics assistant. Ask me anything about the AITC platform, and I'll pull from our knowledge base.",
+    "Hello. Ask me anything about AITC.",
 };
 
 export default function ChatWidget() {
@@ -100,13 +100,10 @@ export default function ChatWidget() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       {open && (
-        <div className="mb-4 flex h-[520px] w-[360px] flex-col overflow-hidden rounded-xl border border-cyan-glow/25 bg-void-900/95 shadow-glow backdrop-blur-xl">
-          <div className="flex items-center justify-between border-b border-cyan-glow/15 bg-void-800/70 px-4 py-3">
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-cyan-glow shadow-glow-sm animate-pulse-slow" />
-              <p className="font-mono text-xs uppercase tracking-widest text-slate-200">AGI Assistant</p>
-            </div>
-            <button onClick={() => setOpen(false)} className="text-slate-400 hover:text-cyan-glow">
+        <div className="mb-4 flex h-[520px] w-[min(360px,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl bg-white shadow-[0_20px_60px_rgba(0,0,0,0.16)]">
+          <div className="flex items-center justify-between border-b border-black/10 px-4 py-3">
+            <p className="text-[15px] font-medium text-ink">Assistant</p>
+            <button onClick={() => setOpen(false)} className="text-muted hover:text-ink">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
               </svg>
@@ -117,10 +114,8 @@ export default function ChatWidget() {
             {messages.map((m, i) => (
               <div
                 key={i}
-                className={`max-w-[85%] rounded-lg px-3 py-2 text-sm leading-relaxed ${
-                  m.role === "user"
-                    ? "ml-auto bg-gradient-to-r from-accent-blue to-accent-cyan text-void-950"
-                    : "border border-cyan-glow/15 bg-void-800/60 text-slate-200"
+                className={`max-w-[85%] rounded-2xl px-3 py-2 text-[15px] leading-relaxed ${
+                  m.role === "user" ? "ml-auto bg-apple text-white" : "bg-canvas text-ink"
                 }`}
               >
                 {m.content}
@@ -129,52 +124,47 @@ export default function ChatWidget() {
 
             {loading && (
               <div className="flex items-center gap-1 px-3 py-2">
-                <span className="h-1.5 w-1.5 animate-blink rounded-full bg-cyan-glow" />
-                <span className="h-1.5 w-1.5 animate-blink rounded-full bg-cyan-glow [animation-delay:0.2s]" />
-                <span className="h-1.5 w-1.5 animate-blink rounded-full bg-cyan-glow [animation-delay:0.4s]" />
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-muted" />
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-muted [animation-delay:0.2s]" />
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-muted [animation-delay:0.4s]" />
               </div>
             )}
 
             {showContactForm && !contactSent && (
-              <div className="corner-brackets rounded-lg border border-accent-amber/30 bg-void-800/70 p-3">
-                <p className="mb-2 font-mono text-[11px] uppercase tracking-wide text-accent-amber">
-                  Route to AGI team
-                </p>
+              <div className="rounded-2xl bg-canvas p-3">
+                <p className="mb-2 text-[13px] text-muted">Send this to the team</p>
                 <input
                   value={contact.name}
                   onChange={(e) => setContact((c) => ({ ...c, name: e.target.value }))}
                   placeholder="Your name"
-                  className="mb-2 w-full rounded-md border border-cyan-glow/20 bg-void-950/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-glow/60 focus:outline-none"
+                  className="field mb-2 !py-2 !text-[15px]"
                 />
                 <input
                   value={contact.email}
                   onChange={(e) => setContact((c) => ({ ...c, email: e.target.value }))}
                   placeholder="Your email address"
                   type="email"
-                  className="mb-2 w-full rounded-md border border-cyan-glow/20 bg-void-950/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-glow/60 focus:outline-none"
+                  className="field mb-2 !py-2 !text-[15px]"
                 />
-                <button
-                  onClick={submitContact}
-                  className="w-full rounded-md bg-gradient-to-r from-accent-blue to-accent-cyan px-3 py-2 text-sm font-semibold text-void-950 hover:opacity-90"
-                >
-                  Send to AGI Aeronautics
+                <button onClick={submitContact} className="btn w-full !py-2 !text-[15px]">
+                  Send
                 </button>
               </div>
             )}
           </div>
 
-          <div className="flex items-center gap-2 border-t border-cyan-glow/15 bg-void-800/50 p-3">
+          <div className="flex items-center gap-2 border-t border-black/10 p-3">
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-              placeholder="Ask about AITC..."
-              className="flex-1 rounded-md border border-cyan-glow/20 bg-void-950/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-glow/60 focus:outline-none"
+              placeholder="Ask about AITC"
+              className="field flex-1 !py-2 !text-[15px]"
             />
             <button
               onClick={sendMessage}
               disabled={loading}
-              className="rounded-md bg-gradient-to-r from-accent-blue to-accent-cyan px-3 py-2 text-void-950 disabled:opacity-50"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-apple text-white disabled:opacity-50"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path d="M4 12l16-8-6 8 6 8-16-8z" fill="currentColor" />
@@ -186,7 +176,7 @@ export default function ChatWidget() {
 
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-accent-blue to-accent-cyan text-void-950 shadow-glow transition hover:scale-105"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-ink shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition hover:scale-105"
         aria-label="Open assistant"
       >
         {open ? (

@@ -15,9 +15,9 @@ type Inquiry = {
 };
 
 const STATUS_STYLES: Record<Inquiry["status"], string> = {
-  NEW: "bg-accent-amber/15 text-accent-amber border-accent-amber/30",
-  ANSWERED: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
-  ARCHIVED: "bg-slate-500/15 text-slate-400 border-slate-500/30",
+  NEW: "bg-[#fff4e5] text-[#bf4800]",
+  ANSWERED: "bg-[#e8f8ee] text-[#1d7a3a]",
+  ARCHIVED: "bg-canvas text-muted",
 };
 
 export default function InquiriesPage() {
@@ -46,11 +46,11 @@ export default function InquiriesPage() {
     });
   }
 
-  if (loading) return <p className="text-sm text-slate-500">Loading...</p>;
+  if (loading) return <p className="text-[15px] text-muted">Loading...</p>;
 
   if (inquiries.length === 0) {
     return (
-      <div className="hud-panel corner-brackets rounded-2xl p-10 text-center text-slate-500">
+      <div className="rounded-3xl bg-canvas p-10 text-center text-[15px] text-muted">
         No inquiries yet. Messages from the contact form and chatbot fallback will appear here.
       </div>
     );
@@ -59,29 +59,29 @@ export default function InquiriesPage() {
   return (
     <div className="space-y-4">
       {inquiries.map((inquiry) => (
-        <div key={inquiry.id} className="hud-panel corner-brackets rounded-xl p-5">
+        <div key={inquiry.id} className="rounded-3xl bg-canvas p-5">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
               <div className="flex items-center gap-2">
-                <p className="font-display font-semibold text-slate-100">{inquiry.name}</p>
-                <span className="rounded-full border border-cyan-glow/20 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-slate-400">
-                  {inquiry.source === "CHATBOT" ? "Chatbot" : "Contact Form"}
+                <p className="font-medium text-ink">{inquiry.name}</p>
+                <span className="rounded-full bg-white px-2 py-0.5 text-[11px] text-muted">
+                  {inquiry.source === "CHATBOT" ? "Chat" : "Contact"}
                 </span>
               </div>
-              <p className="font-mono text-xs text-cyan-glow/80">{inquiry.email}</p>
+              <p className="text-[13px] text-[#0066cc]">{inquiry.email}</p>
               {inquiry.organization && (
-                <p className="text-xs text-slate-500">{inquiry.organization}</p>
+                <p className="text-[12px] text-muted">{inquiry.organization}</p>
               )}
             </div>
 
             <div className="flex items-center gap-2">
-              <span className={`rounded-md border px-2 py-1 font-mono text-[10px] uppercase tracking-widest ${STATUS_STYLES[inquiry.status]}`}>
+              <span className={`rounded-full px-2 py-1 text-[11px] ${STATUS_STYLES[inquiry.status]}`}>
                 {inquiry.status}
               </span>
               <select
                 value={inquiry.status}
                 onChange={(e) => updateStatus(inquiry.id, e.target.value as Inquiry["status"])}
-                className="rounded-md border border-cyan-glow/20 bg-void-950/60 px-2 py-1 text-xs text-slate-200"
+                className="rounded-full border border-black/10 bg-white px-2 py-1 text-[12px] text-ink"
               >
                 <option value="NEW">New</option>
                 <option value="ANSWERED">Answered</option>
@@ -90,25 +90,25 @@ export default function InquiriesPage() {
             </div>
           </div>
 
-          <p className="mt-3 whitespace-pre-wrap text-sm text-slate-300">{inquiry.message}</p>
+          <p className="mt-3 whitespace-pre-wrap text-[15px] text-ink">{inquiry.message}</p>
 
           {inquiry.context && (
             <div className="mt-3">
               <button
                 onClick={() => setExpanded(expanded === inquiry.id ? null : inquiry.id)}
-                className="font-mono text-xs uppercase tracking-widest text-cyan-glow/70 hover:text-cyan-glow"
+                className="text-[13px] text-[#0066cc] hover:underline"
               >
                 {expanded === inquiry.id ? "Hide conversation" : "View full conversation"}
               </button>
               {expanded === inquiry.id && (
-                <pre className="mt-2 max-h-64 overflow-y-auto whitespace-pre-wrap rounded-md border border-cyan-glow/10 bg-void-950/60 p-3 text-xs text-slate-400">
+                <pre className="mt-2 max-h-64 overflow-y-auto whitespace-pre-wrap rounded-2xl bg-white p-3 text-[12px] text-muted">
                   {inquiry.context}
                 </pre>
               )}
             </div>
           )}
 
-          <p className="mt-3 font-mono text-[11px] text-slate-600">
+          <p className="mt-3 text-[12px] text-muted">
             {new Date(inquiry.createdAt).toLocaleString()}
           </p>
         </div>

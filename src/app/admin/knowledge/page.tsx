@@ -72,10 +72,9 @@ export default function KnowledgeBasePage() {
 
   return (
     <div className="space-y-8">
-      <div className="hud-panel corner-brackets rounded-2xl p-6">
-        <p className="font-mono text-xs uppercase tracking-widest text-cyan-glow/80">// Ingest Knowledge</p>
-        <h2 className="mt-2 font-display text-xl font-semibold text-slate-50">Upload a document</h2>
-        <p className="mt-2 text-sm text-slate-400">
+      <div className="rounded-3xl bg-canvas p-6">
+        <h2 className="text-[21px] font-semibold tracking-tight text-ink">Upload a document</h2>
+        <p className="mt-2 text-[15px] text-muted">
           Accepted formats: .txt, .md, .pdf, .docx. The document is chunked and embedded with
           OpenAI, then used by the assistant to answer visitor questions.
         </p>
@@ -85,12 +84,12 @@ export default function KnowledgeBasePage() {
             ref={fileInputRef}
             type="file"
             accept=".txt,.md,.pdf,.docx,text/plain,application/pdf"
-            className="flex-1 rounded-md border border-cyan-glow/20 bg-void-950/60 px-4 py-2.5 text-sm text-slate-200 file:mr-3 file:rounded-md file:border-0 file:bg-accent-blue/20 file:px-3 file:py-1.5 file:text-cyan-glow"
+            className="field flex-1 file:mr-3 file:rounded-full file:border-0 file:bg-apple file:px-3 file:py-1.5 file:text-white"
           />
           <button
             type="submit"
             disabled={uploading}
-            className="rounded-md bg-gradient-to-r from-accent-blue to-accent-cyan px-6 py-2.5 font-mono text-xs uppercase tracking-widest text-void-950 disabled:opacity-50"
+            className="btn disabled:opacity-50"
           >
             {uploading ? "Processing..." : "Upload & Embed"}
           </button>
@@ -103,18 +102,18 @@ export default function KnowledgeBasePage() {
         )}
       </div>
 
-      <div className="hud-panel corner-brackets rounded-2xl p-6">
-        <h2 className="font-display text-xl font-semibold text-slate-50">Indexed documents</h2>
+      <div className="rounded-3xl bg-canvas p-6">
+        <h2 className="text-[21px] font-semibold tracking-tight text-ink">Indexed documents</h2>
 
         {loading ? (
-          <p className="mt-4 text-sm text-slate-500">Loading...</p>
+          <p className="mt-4 text-[15px] text-muted">Loading...</p>
         ) : documents.length === 0 ? (
-          <p className="mt-4 text-sm text-slate-500">No documents uploaded yet.</p>
+          <p className="mt-4 text-[15px] text-muted">No documents uploaded yet.</p>
         ) : (
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-cyan-glow/10 font-mono text-xs uppercase tracking-widest text-slate-500">
+                <tr className="border-b border-black/10 text-[12px] text-muted">
                   <th className="py-2 pr-4">Filename</th>
                   <th className="py-2 pr-4">Chunks</th>
                   <th className="py-2 pr-4">Characters</th>
@@ -124,17 +123,17 @@ export default function KnowledgeBasePage() {
               </thead>
               <tbody>
                 {documents.map((doc) => (
-                  <tr key={doc.id} className="border-b border-cyan-glow/5">
-                    <td className="py-3 pr-4 text-slate-200">{doc.filename}</td>
-                    <td className="py-3 pr-4 text-slate-400">{doc.chunkCount}</td>
-                    <td className="py-3 pr-4 text-slate-400">{doc.charCount.toLocaleString()}</td>
-                    <td className="py-3 pr-4 text-slate-400">
+                  <tr key={doc.id} className="border-b border-black/5">
+                    <td className="py-3 pr-4 text-ink">{doc.filename}</td>
+                    <td className="py-3 pr-4 text-muted">{doc.chunkCount}</td>
+                    <td className="py-3 pr-4 text-muted">{doc.charCount.toLocaleString()}</td>
+                    <td className="py-3 pr-4 text-muted">
                       {new Date(doc.createdAt).toLocaleDateString()}
                     </td>
                     <td className="py-3 text-right">
                       <button
                         onClick={() => handleDelete(doc.id)}
-                        className="font-mono text-xs uppercase tracking-widest text-red-400 hover:text-red-300"
+                        className="text-[13px] text-[#bf4800] hover:underline"
                       >
                         Remove
                       </button>

@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 const TABS = [
   { href: "/admin", label: "Overview" },
-  { href: "/admin/knowledge", label: "Knowledge Base" },
+  { href: "/admin/knowledge", label: "Knowledge" },
   { href: "/admin/inquiries", label: "Inquiries" },
 ];
 
@@ -18,26 +18,15 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-12">
-      <div className="mb-8 flex flex-col gap-2 border-b border-cyan-glow/10 pb-6 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-cyan-glow/80">
-            // Restricted Access
-          </p>
-          <h1 className="mt-1 font-display text-2xl font-bold text-slate-50">Admin Control Center</h1>
-        </div>
-        <p className="font-mono text-xs text-slate-500">
-          Signed in as <span className="text-cyan-glow">{user.email}</span>
-        </p>
+    <div className="mx-auto max-w-5xl px-6 py-16">
+      <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <h1 className="text-[32px] font-semibold tracking-tight text-ink">Admin</h1>
+        <p className="text-[13px] text-muted">{user.email}</p>
       </div>
 
-      <div className="mb-8 flex gap-2 overflow-x-auto">
+      <div className="mb-8 flex gap-6 border-b border-black/10">
         {TABS.map((tab) => (
-          <Link
-            key={tab.href}
-            href={tab.href}
-            className="rounded-md border border-cyan-glow/20 px-4 py-2 font-mono text-xs uppercase tracking-widest text-slate-300 transition hover:border-cyan-glow/50 hover:text-cyan-glow"
-          >
+          <Link key={tab.href} href={tab.href} className="pb-3 text-[15px] text-ink/70 hover:text-ink">
             {tab.label}
           </Link>
         ))}

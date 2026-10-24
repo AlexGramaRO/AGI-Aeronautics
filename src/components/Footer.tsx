@@ -3,57 +3,37 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-cyan-glow/10 bg-void-950/80 py-12">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-start justify-between gap-8 md:flex-row">
+    <footer className="bg-canvas">
+      <div className="mx-auto max-w-6xl px-6 py-12">
+        <div className="flex flex-col gap-10 border-b border-black/10 pb-8 md:flex-row md:justify-between">
           <div>
-            <span className="inline-flex rounded-lg bg-white px-3 py-2">
-              <Image
-                src="/logo/agi-logo.png"
-                alt="AGI Aeronautics"
-                width={1370}
-                height={652}
-                className="h-14 w-auto"
-              />
-            </span>
-            <p className="mt-4 max-w-sm font-mono text-xs leading-relaxed text-slate-500">
-              AGI AERONAUTICS &mdash; INTELLIGENCE FOR AVIATION.
-              <br />
-              AITC Platform: a web-based, AI-augmented air traffic control simulator.
+            <Image src="/logo/agi-logo.png" alt="AGI Aeronautics" width={1370} height={652} className="h-12 w-auto" />
+            <p className="mt-4 max-w-xs text-[12px] leading-relaxed text-muted">
+              AITC is a browser-based air traffic control simulator for training, research, and operations development.
             </p>
           </div>
-
-          <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-12 text-[12px]">
             <div>
-              <p className="mb-3 font-mono text-xs uppercase tracking-widest text-cyan-glow/80">
-                Platform
-              </p>
-              <ul className="space-y-2 text-slate-400">
-                <li><Link href="/#platform" className="hover:text-cyan-glow">Overview</Link></li>
-                <li><Link href="/#features" className="hover:text-cyan-glow">Capabilities</Link></li>
-                <li><Link href="/#simulator" className="hover:text-cyan-glow">Simulator</Link></li>
+              <p className="mb-3 text-ink">Platform</p>
+              <ul className="space-y-2 text-muted">
+                <li><Link href="/#platform" className="hover:underline">Overview</Link></li>
+                <li><Link href="/#features" className="hover:underline">Capabilities</Link></li>
+                <li><Link href="/#simulator" className="hover:underline">Devices</Link></li>
               </ul>
             </div>
             <div>
-              <p className="mb-3 font-mono text-xs uppercase tracking-widest text-cyan-glow/80">
-                Company
-              </p>
-              <ul className="space-y-2 text-slate-400">
-                <li><Link href="/contact" className="hover:text-cyan-glow">Contact</Link></li>
-                <li><Link href="/login" className="hover:text-cyan-glow">Log in</Link></li>
-                <li><Link href="/register" className="hover:text-cyan-glow">Register</Link></li>
+              <p className="mb-3 text-ink">Company</p>
+              <ul className="space-y-2 text-muted">
+                <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+                <li><Link href="/login" className="hover:underline">Log in</Link></li>
+                <li><Link href="/register" className="hover:underline">Register</Link></li>
               </ul>
             </div>
           </div>
         </div>
-
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-cyan-glow/10 pt-6 font-mono text-[11px] text-slate-500 sm:flex-row">
-          <span>&copy; {new Date().getFullYear()} AGI Aeronautics LLC. All rights reserved.</span>
-          <span className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-glow-sm animate-pulse-slow" />
-            SYSTEMS NOMINAL
-          </span>
-        </div>
+        <p className="pt-5 text-[12px] text-muted">
+          Copyright © {new Date().getFullYear()} AGI Aeronautics LLC. All rights reserved.
+        </p>
       </div>
     </footer>
   );

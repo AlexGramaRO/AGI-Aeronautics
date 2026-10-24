@@ -13,23 +13,19 @@ export default async function AdminOverviewPage() {
   ]);
 
   const cards = [
-    { label: "Knowledge Documents", value: documentCount, href: "/admin/knowledge" },
-    { label: "Embedded Chunks", value: chunkCount, href: "/admin/knowledge" },
-    { label: "New Inquiries", value: newInquiries, href: "/admin/inquiries" },
-    { label: "Total Inquiries", value: totalInquiries, href: "/admin/inquiries" },
-    { label: "Registered Users", value: userCount, href: "#" },
+    { label: "Knowledge documents", value: documentCount, href: "/admin/knowledge" },
+    { label: "Embedded chunks", value: chunkCount, href: "/admin/knowledge" },
+    { label: "New inquiries", value: newInquiries, href: "/admin/inquiries" },
+    { label: "Total inquiries", value: totalInquiries, href: "/admin/inquiries" },
+    { label: "Registered users", value: userCount, href: "#" },
   ];
 
   return (
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {cards.map((card) => (
-        <Link
-          key={card.label}
-          href={card.href}
-          className="corner-brackets hud-panel rounded-xl p-6 transition hover:border-cyan-glow/40"
-        >
-          <p className="font-display text-3xl font-bold text-gradient">{card.value}</p>
-          <p className="mt-2 font-mono text-xs uppercase tracking-widest text-slate-400">{card.label}</p>
+        <Link key={card.label} href={card.href} className="rounded-3xl bg-canvas p-6 transition hover:bg-[#ececf1]">
+          <p className="text-[40px] font-semibold tracking-tight text-ink">{card.value}</p>
+          <p className="mt-1 text-[15px] text-muted">{card.label}</p>
         </Link>
       ))}
     </div>
