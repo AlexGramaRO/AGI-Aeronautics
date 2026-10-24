@@ -3,28 +3,34 @@ import Devices from "@/components/Devices";
 
 const FEATURES = [
   {
-    title: "Live radar.",
-    description: "Sector scopes, aircraft tags, and traffic flow, rendered in the browser.",
+    title: "The simulator.",
+    description:
+      "A human-machine interface that replicates the operational environment of air traffic control.",
   },
   {
-    title: "An AI co-pilot.",
-    description: "Conflict flags and suggested vectors that help trainees build separation awareness.",
+    title: "Airspace.",
+    description:
+      "Create airspace in the platform. Bring in aeronautical information publication maps, or maps that already exist in other simulators.",
   },
   {
-    title: "Any airspace.",
-    description: "Approach, departure, and en-route scenarios on models you define.",
+    title: "Exercises.",
+    description:
+      "Build an exercise graphically, import aircraft as data, or acquire traffic from ADS-B.",
   },
   {
-    title: "Standard phraseology.",
-    description: "Voice and text communications, with readback checks and instructor override.",
+    title: "Replay.",
+    description:
+      "No large video files. A log records the exercise and plays it back as a reconstruction of what happened.",
   },
   {
-    title: "A clear record.",
-    description: "Session replay, separation-loss detection, and scoring for instructors.",
+    title: "Voice.",
+    description:
+      "A voice communication system in the browser. People connect without installing or configuring anything locally.",
   },
   {
-    title: "Every position.",
-    description: "Controllers, pilots, instructors, and observers in the same live exercise.",
+    title: "Intelligence.",
+    description:
+      "AI pilots aircraft, coordinates with neighboring sectors, and scripts emergencies and non-standard communications. It reasons about a trainee's questions, using responses instructors define.",
   },
 ];
 
@@ -74,8 +80,11 @@ export default function HomePage() {
       <section id="features" className="bg-canvas py-24 sm:py-28">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="text-center text-[32px] font-semibold tracking-tight text-ink sm:text-[48px]">
-            Built for the room.
+            Everything the simulation needs.
           </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-[17px] leading-relaxed text-muted sm:text-[21px]">
+            One platform for the whole job. The interface, the airspace, the exercises, the replay, the voice, and the intelligence.
+          </p>
           <div className="mt-14 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {FEATURES.map((feature) => (
               <div key={feature.title}>
