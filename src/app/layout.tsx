@@ -5,6 +5,7 @@ import RadarBackground from "@/components/RadarBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import MetaPixel from "@/components/MetaPixel";
 import { getCurrentUser } from "@/lib/session";
 
 const orbitron = Orbitron({
@@ -46,6 +47,7 @@ export default async function RootLayout({
       <body
         className={`${orbitron.variable} ${sora.variable} ${mono.variable} font-body antialiased`}
       >
+        <MetaPixel />
         <RadarBackground />
         <Navbar user={user} />
         <main className="min-h-screen pt-16">{children}</main>
