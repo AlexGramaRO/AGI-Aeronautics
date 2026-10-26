@@ -28,7 +28,7 @@ export default function Navbar({ user }: { user: SessionPayload | null }) {
       <nav className="mx-auto flex h-12 max-w-6xl items-center justify-between px-5">
         <Link href="/" className="flex items-center gap-2" aria-label="AGI Aeronautics">
           <Image src="/logo/agi-mark.png" alt="" width={662} height={662} className="h-7 w-7" priority />
-          <span className="text-[15px] font-medium tracking-tight text-ink">AGI</span>
+          <span className="text-[15px] font-medium tracking-tight text-ink">AGI Aeronautics</span>
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">
