@@ -30,6 +30,7 @@ enum SimulatorKind {
 
 enum DraftStatus {
   PENDING
+  OUTBOX
   SENT
 }
 

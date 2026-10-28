@@ -13,14 +13,16 @@ const schema = z.object({
   note: z.string().min(1).max(4000),
 });
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   const user = await getCurrentUser();
   if (!user || !isStaffRole(user.role)) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
+  const requested = request.nextUrl.searchParams.get("status");
+  const status = requested === "OUTBOX" ? "OUTBOX" : "PENDING";
   const drafts = await prisma.mailDraft.findMany({
-    where: { status: "PENDING" },
+    where: { status },
     orderBy: { createdAt: "desc" },
     include: { organization: { select: { id: true, name: true, city: true, country: true } } },
   });

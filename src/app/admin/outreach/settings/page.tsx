@@ -42,7 +42,7 @@ export default function OutreachSettingsPage() {
         Gmail uses <span className="text-ink">GMAIL_USER</span> set to office@agi-aeronautics.com and{" "}
         <span className="text-ink">GMAIL_APP_PASSWORD</span>, a 16-character Google app password for that mailbox.
         The normal mailbox password is rejected. Gmail does not add its own signature to mail sent from this site,
-        so paste that signature below. It is added when a draft is approved.
+        so paste that signature below. It is added when a message is sent from the outbox.
       </p>
       <p className="mt-4 text-[15px] text-ink">
         OpenAI key: {openaiConfigured ? "present" : "missing"}. Gmail:{" "}

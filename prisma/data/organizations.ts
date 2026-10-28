@@ -1061,6 +1061,17 @@ const CORE_ORGANIZATIONS: SeedOrg[] = [
   { name: "Korea Aerospace University", kind: "UNIVERSITY", country: "Republic of Korea", city: "Goyang", lat: 37.601, lng: 126.865, website: "https://www.kau.ac.kr", notes: unpublished },
   { name: "Technion", kind: "UNIVERSITY", country: "Israel", city: "Haifa", lat: 32.777, lng: 35.022, website: "https://www.technion.ac.il", notes: unpublished },
   { name: "UNSW Sydney", kind: "UNIVERSITY", country: "Australia", city: "Sydney", lat: -33.917, lng: 151.231, website: "https://www.unsw.edu.au", notes: unpublished },
+  {
+    name: "Test contact",
+    kind: "OTHER",
+    country: "Arctic",
+    city: "North Pole",
+    lat: 84.8,
+    lng: 0,
+    email: "alex.grama@icloud.com",
+    contactTitle: "Test",
+    notes: "Practice pin for sending a test message. It is not an air navigation organisation.",
+  },
 ];
 
 export const ORGANIZATIONS: SeedOrg[] = [...CORE_ORGANIZATIONS, ...EXTRA_ORGANIZATIONS];

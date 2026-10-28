@@ -215,12 +215,15 @@ export default function OutreachMap() {
         const unread = cluster.orgs.reduce((sum, org) => sum + org.unreadCount, 0);
         const received = cluster.orgs.reduce((sum, org) => sum + org.receivedCount, 0);
         const on = cluster.orgs.some((org) => selectedSet.has(org.id));
+        const testPin = cluster.orgs.some((org) =>
+          org.contacts.some((contact) => contact.email?.toLowerCase() === "alex.grama@icloud.com")
+        );
         const badge = unread || received;
         const icon = L.divIcon({
           className: "",
           iconSize: [22, 22],
           iconAnchor: [11, 11],
-          html: `<div class="outreach-pin${on ? " is-selected" : ""}" title="${received} received, ${unread} unread">${
+          html: `<div class="outreach-pin${testPin ? " is-test" : ""}${on ? " is-selected" : ""}" title="${received} received, ${unread} unread">${
             badge ? `<span class="outreach-badge${unread ? "" : " is-read"}">${unread || received}</span>` : ""
           }</div>`,
         });
