@@ -7,7 +7,7 @@ const schema = z.object({ role: z.enum(["USER", "ADMIN"]) });
 
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const session = await getCurrentUser();
   if (!session) return NextResponse.json({ error: "Forbidden" }, { status: 403 });
@@ -17,7 +17,8 @@ export async function PATCH(
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
-  if (params.id === me.id) {
+  const { id } = await params;
+  if (id === me.id) {
     return NextResponse.json({ error: "You cannot change your own role." }, { status: 400 });
   }
 
@@ -28,7 +29,7 @@ export async function PATCH(
   }
 
   const user = await prisma.user.update({
-    where: { id: params.id },
+    where: { id },
     data: { role: parsed.data.role },
     select: { id: true, name: true, email: true, role: true },
   });

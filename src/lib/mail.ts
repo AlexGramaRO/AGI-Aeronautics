@@ -16,7 +16,7 @@ export function gmailConfigured() {
 export async function sendGmail(input: { to: string; subject: string; text: string }) {
   const auth = gmailConfig();
   if (!auth) {
-    throw new Error("GMAIL_USER and GMAIL_APP_PASSWORD are not set in Railway variables.");
+    throw new Error("GMAIL_USER and GMAIL_APP_PASSWORD are not set in Railway or Cloudflare variables.");
   }
 
   const transport = nodemailer.createTransport({
@@ -50,7 +50,7 @@ export type SyncedMail = {
 export async function fetchRecentGmail(limit = 80): Promise<SyncedMail[]> {
   const auth = gmailConfig();
   if (!auth) {
-    throw new Error("GMAIL_USER and GMAIL_APP_PASSWORD are not set in Railway variables.");
+    throw new Error("GMAIL_USER and GMAIL_APP_PASSWORD are not set in Railway or Cloudflare variables.");
   }
 
   const client = new ImapFlow({

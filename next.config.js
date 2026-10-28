@@ -1,12 +1,27 @@
 /** @type {import('next').NextConfig} */
+const onCloudflare = process.env.WORKERS_CI === "1" || process.env.CF_PAGES === "1";
+
 const nextConfig = {
-  output: "standalone",
+  ...(onCloudflare ? {} : { output: "standalone" }),
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    serverComponentsExternalPackages: ["pdf-parse", "mammoth", "nodemailer", "imapflow", "mailparser"],
-  },
+  serverExternalPackages: [
+    "pdf-parse",
+    "mammoth",
+    "nodemailer",
+    "imapflow",
+    "mailparser",
+    "@prisma/client",
+    ".prisma/client",
+    "@prisma/adapter-pg",
+    "pg",
+  ],
 };
 
 module.exports = nextConfig;
+
+if (process.env.NODE_ENV !== "production") {
+  const { initOpenNextCloudflareForDev } = require("@opennextjs/cloudflare");
+  initOpenNextCloudflareForDev();
+}

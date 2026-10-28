@@ -3,7 +3,7 @@ import { SESSION_COOKIE, verifySession, type SessionPayload } from "./auth";
 import { isStaffRole } from "./roles";
 
 export async function getCurrentUser(): Promise<SessionPayload | null> {
-  const token = cookies().get(SESSION_COOKIE)?.value;
+  const token = (await cookies()).get(SESSION_COOKIE)?.value;
   if (!token) return null;
   return verifySession(token);
 }

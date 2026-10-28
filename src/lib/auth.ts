@@ -7,7 +7,7 @@ function getSecretKey() {
   const secret = process.env.JWT_SECRET;
   if (!secret) {
     throw new Error(
-      "JWT_SECRET environment variable is not set. Add it in Railway variables."
+      "JWT_SECRET environment variable is not set. Add it in Railway or Cloudflare variables."
     );
   }
   return new TextEncoder().encode(secret);

@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "node scripts/build.js",
     "start": "next start -p ${PORT:-3000}",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "lint": "next lint",
     "db:generate": "prisma generate",
     "db:migrate:dev": "prisma migrate dev",
@@ -14,6 +16,7 @@
     "release": "prisma migrate deploy && tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^5.22.0",
     "@prisma/client": "^5.20.0",
     "bcryptjs": "^2.4.3",
     "imapflow": "^2.9.1",
@@ -21,21 +24,24 @@
     "leaflet": "^1.9.4",
     "mailparser": "^3.12.4",
     "mammoth": "^1.8.0",
-    "next": "^14.2.15",
+    "next": "^15.5.28",
     "nodemailer": "^10.2.1",
     "openai": "^4.68.0",
     "pdf-parse": "^1.1.1",
+    "pg": "^8.23.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.14",
     "@types/bcryptjs": "^2.4.6",
     "@types/leaflet": "^1.9.22",
     "@types/mailparser": "^3.9.0",
     "@types/node": "^20.16.10",
     "@types/nodemailer": "^8.0.2",
     "@types/pdf-parse": "^1.1.4",
+    "@types/pg": "^8.23.1",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
@@ -43,7 +49,8 @@
     "prisma": "^5.20.0",
     "tailwindcss": "^3.4.13",
     "tsx": "^4.19.1",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "wrangler": "^4.154.0"
   },
   "engines": {
     "node": ">=20.0.0"

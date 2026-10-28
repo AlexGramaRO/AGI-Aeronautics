@@ -11,7 +11,7 @@ const schema = z.object({
 
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const user = await getCurrentUser();
   if (!user || !isStaffRole(user.role)) {
@@ -24,8 +24,9 @@ export async function PATCH(
     return NextResponse.json({ error: "Subject and body are required." }, { status: 400 });
   }
 
+  const { id } = await params;
   const draft = await prisma.mailDraft.update({
-    where: { id: params.id },
+    where: { id },
     data: parsed.data,
   });
 
