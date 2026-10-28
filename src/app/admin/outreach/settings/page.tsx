@@ -8,6 +8,7 @@ export default function OutreachSettingsPage() {
   const [openaiConfigured, setOpenaiConfigured] = useState(false);
   const [gmailConfigured, setGmailConfigured] = useState(false);
   const [gmailUser, setGmailUser] = useState("");
+  const [signature, setSignature] = useState("");
   const [notice, setNotice] = useState<string | null>(null);
 
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function OutreachSettingsPage() {
         setOpenaiConfigured(Boolean(data.openaiConfigured));
         setGmailConfigured(Boolean(data.gmailConfigured));
         setGmailUser(data.gmailUser || "");
+        setSignature(data.signature || "");
       });
   }, []);
 
@@ -26,7 +28,7 @@ export default function OutreachSettingsPage() {
     const res = await fetch("/api/admin/outreach/settings", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ model }),
+      body: JSON.stringify({ model, signature }),
     });
     const data = await res.json();
     setNotice(res.ok ? `Using ${data.model}.` : data.error || "Could not save.");
@@ -38,7 +40,9 @@ export default function OutreachSettingsPage() {
       <p className="mt-3 text-[15px] leading-relaxed text-muted">
         The OpenAI key stays in Railway, not in the database. Name it <span className="text-ink">OPENAI_API_KEY</span>.
         Gmail uses <span className="text-ink">GMAIL_USER</span> set to office@agi-aeronautics.com and{" "}
-        <span className="text-ink">GMAIL_APP_PASSWORD</span>, a Google app password for that account.
+        <span className="text-ink">GMAIL_APP_PASSWORD</span>, a 16-character Google app password for that mailbox.
+        The normal mailbox password is rejected. Gmail does not add its own signature to mail sent from this site,
+        so paste that signature below. It is added when a draft is approved.
       </p>
       <p className="mt-4 text-[15px] text-ink">
         OpenAI key: {openaiConfigured ? "present" : "missing"}. Gmail:{" "}
@@ -52,8 +56,15 @@ export default function OutreachSettingsPage() {
           </option>
         ))}
       </select>
+      <label className="mt-6 block text-[13px] text-muted">Gmail signature</label>
+      <textarea
+        className="field mt-1 min-h-[9rem]"
+        value={signature}
+        onChange={(event) => setSignature(event.target.value)}
+        placeholder="Paste the signature from Gmail settings"
+      />
       <button className="btn mt-4" onClick={save}>
-        Save model
+        Save
       </button>
       {notice && <p className="mt-3 text-[15px] text-muted">{notice}</p>}
     </div>

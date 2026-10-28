@@ -9,6 +9,7 @@ export const OUTREACH_MODELS = [
 ] as const;
 
 const MODEL_KEY = "openai_model";
+const SIGNATURE_KEY = "gmail_signature";
 
 export async function getOutreachModel() {
   const row = await prisma.appSetting.findUnique({ where: { key: MODEL_KEY } });
@@ -16,6 +17,21 @@ export async function getOutreachModel() {
     return row.value;
   }
   return "gpt-4o-mini";
+}
+
+export async function getGmailSignature() {
+  const row = await prisma.appSetting.findUnique({ where: { key: SIGNATURE_KEY } });
+  return row?.value || "";
+}
+
+export async function setGmailSignature(signature: string) {
+  const value = signature.trim();
+  await prisma.appSetting.upsert({
+    where: { key: SIGNATURE_KEY },
+    update: { value },
+    create: { key: SIGNATURE_KEY, value },
+  });
+  return value;
 }
 
 export async function setOutreachModel(model: string) {

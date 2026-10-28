@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
 import { isStaffRole } from "@/lib/roles";
 import { sendGmail } from "@/lib/mail";
+import { getGmailSignature } from "@/lib/outreach";
 
 const schema = z.object({
   ids: z.array(z.string()).optional(),
@@ -31,6 +32,7 @@ export async function POST(request: NextRequest) {
 
   const sent: string[] = [];
   const failed: string[] = [];
+  const signature = await getGmailSignature();
 
   for (const draft of drafts) {
     try {
@@ -38,6 +40,7 @@ export async function POST(request: NextRequest) {
         to: draft.toEmail,
         subject: draft.subject,
         text: draft.body,
+        signature,
       });
       await prisma.mailDraft.update({ where: { id: draft.id }, data: { status: "SENT" } });
       try {
@@ -48,7 +51,7 @@ export async function POST(request: NextRequest) {
             fromEmail: (process.env.GMAIL_USER || "").toLowerCase(),
             toEmail: draft.toEmail,
             subject: draft.subject,
-            body: draft.body,
+            body: result.text,
             gmailId: result.messageId,
             unread: false,
           },
