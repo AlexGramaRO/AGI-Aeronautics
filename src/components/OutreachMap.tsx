@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import type { Map as LeafletMap, LayerGroup, Rectangle, LeafletMouseEvent } from "leaflet";
+import type { Map as LeafletMap, LayerGroup, Rectangle, LeafletMouseEvent, Path } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 type Contact = { id: string; name: string | null; title: string | null; email: string | null };
@@ -119,10 +119,41 @@ export default function OutreachMap() {
     (async () => {
       const L = await import("leaflet");
       if (cancelled || !host || mapRef.current) return;
-      const map = L.map(host, { worldCopyJump: true, minZoom: 2 }).setView([25, 10], 2);
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-        attribution: "&copy; OpenStreetMap &copy; CARTO",
+      const map = L.map(host, {
+        worldCopyJump: false,
+        minZoom: 2,
+        maxBounds: L.latLngBounds(L.latLng(-85, -180), L.latLng(85, 180)),
+        maxBoundsViscosity: 0.8,
+      }).setView([20, 10], 2);
+      map.attributionControl.setPrefix(false);
+      map.attributionControl.addAttribution("Natural Earth");
+      let countries: GeoJSON.FeatureCollection = { type: "FeatureCollection", features: [] };
+      try {
+        const res = await fetch("/geo/countries.geojson");
+        if (!res.ok) throw new Error("countries");
+        countries = (await res.json()) as GeoJSON.FeatureCollection;
+      } catch {
+        if (!cancelled) setError("Could not load country outlines.");
+      }
+      if (cancelled) {
+        map.remove();
+        return;
+      }
+      countries.features = countries.features.filter((feature) => feature.properties?.name !== "Antarctica");
+      const outline = { color: "#c7c7cc", weight: 0.8, fillColor: "#ffffff", fillOpacity: 1 };
+      const highlight = { color: "#1d1d1f", weight: 1.2, fillColor: "#f5f5f7", fillOpacity: 1 };
+      const shapes = L.geoJSON(countries, {
+        style: () => outline,
+        onEachFeature(feature, layer) {
+          const name = feature.properties?.name;
+          if (!name) return;
+          const shape = layer as Path;
+          shape.bindTooltip(String(name), { sticky: true, direction: "top", opacity: 1, className: "country-tip" });
+          shape.on("mouseover", () => shape.setStyle(highlight));
+          shape.on("mouseout", () => shape.setStyle(outline));
+        },
       }).addTo(map);
+      if (countries.features.length) map.fitBounds(shapes.getBounds(), { padding: [12, 12], maxZoom: 3 });
       layerRef.current = L.layerGroup().addTo(map);
       mapRef.current = map;
 
@@ -268,7 +299,7 @@ export default function OutreachMap() {
           setMenu({ x: event.clientX, y: event.clientY });
         }}
       >
-        <div ref={mapEl} className="h-[70vh] w-full bg-canvas" />
+        <div ref={mapEl} className="outreach-map h-[70vh] w-full" />
         {selecting && (
           <div className="absolute left-3 top-3 z-[500] flex flex-wrap items-center gap-2 rounded-full bg-white/95 px-3 py-2 text-[13px] shadow">
             <span>{selected.length} selected</span>

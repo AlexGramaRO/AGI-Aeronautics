@@ -14,6 +14,13 @@ const onCloudflare = process.env.WORKERS_CI === "1" || process.env.CF_PAGES === 
 
 if (onCloudflare && process.env.OPENNEXT_BUILDING !== "1") {
   run("opennextjs-cloudflare", ["build"], { OPENNEXT_BUILDING: "1" });
+  if (process.env.WORKERS_CI === "1") {
+    const secrets = spawnSync(process.execPath, ["scripts/ensure-cloudflare-secrets.js"], {
+      stdio: "inherit",
+      env: process.env,
+    });
+    if (secrets.status !== 0) process.exit(secrets.status ?? 1);
+  }
 } else {
   run("prisma", ["generate"]);
   run("prisma", ["generate", "--schema", "prisma/schema.d1.prisma"]);
