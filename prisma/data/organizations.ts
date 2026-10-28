@@ -1,3 +1,5 @@
+import { EXTRA_ORGANIZATIONS } from "./coverage";
+
 export type SeedOrg = {
   name: string;
   kind: "ANSP" | "TRAINING_ACADEMY" | "UNIVERSITY" | "OTHER";
@@ -51,7 +53,7 @@ export function organizationSeedData(org: SeedOrg) {
   };
 }
 
-export const ORGANIZATIONS: SeedOrg[] = [
+const CORE_ORGANIZATIONS: SeedOrg[] = [
   {
     name: "NAV CANADA",
     kind: "ANSP",
@@ -74,6 +76,8 @@ export const ORGANIZATIONS: SeedOrg[] = [
     lat: 38.887,
     lng: -77.022,
     website: "https://www.faa.gov",
+    email: "9-AJV-8-HQ-Correspondence@faa.gov",
+    contactTitle: "Aeronautical information",
     atmSystem: "ERAM at all 20 continental en-route centres. ATOP is the oceanic automation at Anchorage, New York, and Oakland.",
     notes: unpublished,
   },
@@ -302,7 +306,7 @@ export const ORGANIZATIONS: SeedOrg[] = [
   {
     name: "ANS CR",
     kind: "ANSP",
-    country: "Czechia",
+    country: "Czech Republic",
     city: "Jeneč",
     lat: 50.085,
     lng: 14.127,
@@ -578,7 +582,19 @@ export const ORGANIZATIONS: SeedOrg[] = [
     contactTitle: "Aeronautical information",
     notes: unpublished,
   },
-  { name: "ANA", kind: "ANSP", country: "Luxembourg", city: "Luxembourg", lat: 49.611, lng: 6.131, website: "https://www.ana.lu", notes: unpublished },
+  {
+    name: "ANA",
+    kind: "ANSP",
+    country: "Luxembourg",
+    city: "Luxembourg",
+    lat: 49.611,
+    lng: 6.131,
+    website: "https://www.ana.lu",
+    email: "info.ais@aeroport.public.lu",
+    contactTitle: "Aeronautical information",
+    extraContacts: [{ email: "AIM@airport.etat.lu", title: "AIM" }],
+    notes: unpublished,
+  },
   {
     name: "AZANS",
     kind: "ANSP",
@@ -737,7 +753,7 @@ export const ORGANIZATIONS: SeedOrg[] = [
   {
     name: "MOLIT ATM",
     kind: "ANSP",
-    country: "South Korea",
+    country: "Republic of Korea",
     city: "Seoul",
     lat: 37.566,
     lng: 126.978,
@@ -782,7 +798,18 @@ export const ORGANIZATIONS: SeedOrg[] = [
     contactTitle: "Aeronautical information",
     notes: unpublished,
   },
-  { name: "AirNav Indonesia", kind: "ANSP", country: "Indonesia", city: "Jakarta", lat: -6.208, lng: 106.846, website: "https://www.airnavindonesia.co.id", notes: unpublished },
+  {
+    name: "AirNav Indonesia",
+    kind: "ANSP",
+    country: "Indonesia",
+    city: "Jakarta",
+    lat: -6.208,
+    lng: 106.846,
+    website: "https://www.airnavindonesia.co.id",
+    email: "ppid@airnavindonesia.co.id",
+    contactTitle: "Public information",
+    notes: unpublished,
+  },
   {
     name: "CAD Hong Kong",
     kind: "ANSP",
@@ -850,10 +877,38 @@ export const ORGANIZATIONS: SeedOrg[] = [
       "ATC academy with sites in Sweden, Denmark, Ireland, Hungary, Spain, and Belgium. Tower and radar simulators use NorthSim, on ROSE Simulation AIR Suite software, under a contract in force from November 2022. An earlier Malmö suite used Micro Nav BEST. " +
       unpublished,
   },
-  { name: "FAA Academy", kind: "TRAINING_ACADEMY", country: "United States", city: "Oklahoma City", lat: 35.393, lng: -97.6, website: "https://www.faa.gov/about/office_org/headquarters_offices/arc", notes: unpublished },
+  {
+    name: "FAA Academy",
+    kind: "TRAINING_ACADEMY",
+    country: "United States",
+    city: "Oklahoma City",
+    lat: 35.393,
+    lng: -97.6,
+    website: "https://www.faa.gov/training_testing/faa_academy/contact",
+    email: "FAA.Academy.FeedBack@faa.gov",
+    contactTitle: "Academy",
+    extraContacts: [{ email: "9-awa-aia-intl-training@faa.gov", title: "International training" }],
+    simulatorKind: "TOWER",
+    simulatorVendor: "Adacel",
+    notes: "The Academy uses the FAA Tower Simulation System. Adacel publishes support for that tower-simulator network. A price for the Academy alone was not published. " + unpublished,
+  },
   { name: "Singapore Aviation Academy", kind: "TRAINING_ACADEMY", country: "Singapore", city: "Singapore", lat: 1.334, lng: 103.967, website: "https://www.caas.gov.sg/saa", notes: unpublished },
   { name: "Civil Aviation Training College", kind: "TRAINING_ACADEMY", country: "India", city: "Prayagraj", lat: 25.435, lng: 81.847, website: "https://www.aai.aero", notes: unpublished },
-  { name: "NAV CANADA Training", kind: "TRAINING_ACADEMY", country: "Canada", city: "Cornwall", lat: 45.021, lng: -74.73, website: "https://www.navcanada.ca", notes: unpublished },
+  {
+    name: "NAV CANADA Training",
+    kind: "TRAINING_ACADEMY",
+    country: "Canada",
+    city: "Cornwall",
+    lat: 45.021,
+    lng: -74.73,
+    website: "https://www.navcanada.ca",
+    email: "service@navcanada.ca",
+    contactTitle: "Customer service",
+    simulatorKind: "RADAR_AND_TOWER",
+    simulatorVendor: "Micro Nav",
+    simulatorAcquired: "2026",
+    notes: "In January 2026 NAV CANADA selected Micro Nav BEST for tower, terminal, en-route, and oceanic training. The contract price was not published. " + unpublished,
+  },
   {
     name: "EUROCONTROL Aviation Learning Centre",
     kind: "TRAINING_ACADEMY",
@@ -994,7 +1049,7 @@ export const ORGANIZATIONS: SeedOrg[] = [
   { name: "Universidad Politécnica de Madrid", kind: "UNIVERSITY", country: "Spain", city: "Madrid", lat: 40.452, lng: -3.726, website: "https://www.upm.es", notes: unpublished },
   { name: "KTH Royal Institute of Technology", kind: "UNIVERSITY", country: "Sweden", city: "Stockholm", lat: 59.349, lng: 18.07, website: "https://www.kth.se", notes: unpublished },
   { name: "Linköping University", kind: "UNIVERSITY", country: "Sweden", city: "Linköping", lat: 58.398, lng: 15.577, website: "https://www.liu.se", notes: unpublished },
-  { name: "Czech Technical University", kind: "UNIVERSITY", country: "Czechia", city: "Prague", lat: 50.103, lng: 14.391, website: "https://www.cvut.cz", notes: unpublished },
+  { name: "Czech Technical University", kind: "UNIVERSITY", country: "Czech Republic", city: "Prague", lat: 50.103, lng: 14.391, website: "https://www.cvut.cz", notes: unpublished },
   { name: "Warsaw University of Technology", kind: "UNIVERSITY", country: "Poland", city: "Warsaw", lat: 52.221, lng: 21.011, website: "https://www.pw.edu.pl", notes: unpublished },
   { name: "University POLITEHNICA of Bucharest", kind: "UNIVERSITY", country: "Romania", city: "Bucharest", lat: 44.438, lng: 26.047, website: "https://upb.ro", notes: unpublished },
   { name: "University of Zagreb FSB", kind: "UNIVERSITY", country: "Croatia", city: "Zagreb", lat: 45.806, lng: 15.969, website: "https://www.fsb.unizg.hr", notes: unpublished },
@@ -1002,7 +1057,9 @@ export const ORGANIZATIONS: SeedOrg[] = [
   { name: "National Aviation University", kind: "UNIVERSITY", country: "Ukraine", city: "Kyiv", lat: 50.439, lng: 30.43, website: "https://www.nau.edu.ua", notes: unpublished },
   { name: "Beihang University", kind: "UNIVERSITY", country: "China", city: "Beijing", lat: 39.981, lng: 116.347, website: "https://www.buaa.edu.cn", notes: unpublished },
   { name: "Nanjing University of Aeronautics and Astronautics", kind: "UNIVERSITY", country: "China", city: "Nanjing", lat: 32.037, lng: 118.814, website: "https://www.nuaa.edu.cn", notes: unpublished },
-  { name: "Korea Aerospace University", kind: "UNIVERSITY", country: "South Korea", city: "Goyang", lat: 37.601, lng: 126.865, website: "https://www.kau.ac.kr", notes: unpublished },
+  { name: "Korea Aerospace University", kind: "UNIVERSITY", country: "Republic of Korea", city: "Goyang", lat: 37.601, lng: 126.865, website: "https://www.kau.ac.kr", notes: unpublished },
   { name: "Technion", kind: "UNIVERSITY", country: "Israel", city: "Haifa", lat: 32.777, lng: 35.022, website: "https://www.technion.ac.il", notes: unpublished },
   { name: "UNSW Sydney", kind: "UNIVERSITY", country: "Australia", city: "Sydney", lat: -33.917, lng: 151.231, website: "https://www.unsw.edu.au", notes: unpublished },
 ];
+
+export const ORGANIZATIONS: SeedOrg[] = [...CORE_ORGANIZATIONS, ...EXTRA_ORGANIZATIONS];
