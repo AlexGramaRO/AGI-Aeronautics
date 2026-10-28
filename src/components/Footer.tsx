@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <Image src="/logo/agi-logo.png" alt="AGI Aeronautics" width={1370} height={652} className="h-12 w-auto" />
             <p className="mt-4 max-w-xs text-[12px] leading-relaxed text-muted">
-              AITC is a browser-based air traffic control simulator for training, research, and operations development.
+              AiTC is a browser-based air traffic control simulator for training, research, and operations development.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-12 text-[12px]">

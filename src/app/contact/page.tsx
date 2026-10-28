@@ -35,7 +35,7 @@ export default function ContactPage() {
         Talk to the team.
       </h1>
       <p className="mt-3 text-center text-[17px] leading-relaxed text-muted">
-        Questions about AITC, partnerships, or early access. A person on the team will reply to your email.
+        Questions about AiTC, partnerships, or early access. A person on the team will reply to your email.
       </p>
 
       <div className="mt-10">

@@ -13,9 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AGI Aeronautics | AITC",
+  title: "AGI Aeronautics | AiTC",
   description:
-    "AITC is a browser-based air traffic control simulator from AGI Aeronautics. It runs on an iMac, a MacBook, an iPad, and any modern computer.",
+    "AiTC is a browser-based air traffic control simulator from AGI Aeronautics. It runs on an iMac, a MacBook, an iPad, and any modern computer.",
   icons: {
     icon: "/logo/agi-mark.png",
   },

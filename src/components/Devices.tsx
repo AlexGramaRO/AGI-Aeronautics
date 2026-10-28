@@ -13,7 +13,7 @@ function Imac() {
     <figure className="flex w-full flex-col items-center">
       <div className="w-full rounded-t-[18px] bg-gradient-to-b from-[#f4f4f6] to-[#d8d8de] p-[10px] shadow-[0_30px_60px_rgba(0,0,0,0.12)]">
         <div className="overflow-hidden rounded-[6px] bg-black">
-          <Screen src="/simulator/welcome.jpg" alt="AITC welcome screen on an iMac" />
+          <Screen src="/simulator/welcome.jpg" alt="AiTC welcome screen on an iMac" />
         </div>
       </div>
       <div className="relative h-11 w-full rounded-b-[14px] bg-gradient-to-b from-[#ececef] to-[#c9c9cf]">
@@ -31,7 +31,7 @@ function MacBook() {
     <figure className="flex w-full flex-col items-center">
       <div className="w-full rounded-t-[12px] bg-[#1d1d1f] p-[7px] pb-[6px] shadow-[0_24px_40px_rgba(0,0,0,0.12)]">
         <div className="overflow-hidden rounded-[3px]">
-          <Screen src="/simulator/radar.png" alt="AITC radar on a MacBook" />
+          <Screen src="/simulator/radar.png" alt="AiTC radar on a MacBook" />
         </div>
       </div>
       <div className="relative h-[14px] w-full rounded-b-[10px] bg-gradient-to-b from-[#e7e7eb] to-[#b9b9c0] shadow-[0_10px_16px_rgba(0,0,0,0.08)]">
@@ -48,7 +48,7 @@ function Ipad() {
       <div className="w-full rounded-[28px] bg-gradient-to-b from-[#ececef] to-[#cfcfd4] p-[11px] shadow-[0_24px_40px_rgba(0,0,0,0.12)]">
         <div className="overflow-hidden rounded-[16px] bg-black">
           <div className="relative aspect-[4/3] overflow-hidden bg-[#0b1c33]">
-            <Image src="/simulator/airspace.png" alt="AITC airspace editor on an iPad" fill className="object-cover object-top" sizes="(min-width: 1024px) 24vw, 80vw" />
+            <Image src="/simulator/airspace.png" alt="AiTC airspace editor on an iPad" fill className="object-cover object-top" sizes="(min-width: 1024px) 24vw, 80vw" />
           </div>
         </div>
       </div>

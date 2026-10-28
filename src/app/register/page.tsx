@@ -41,7 +41,7 @@ export default function RegisterPage() {
     <div className="flex min-h-[80vh] items-center justify-center px-6 py-20">
       <div className="w-full max-w-md">
         <h1 className="text-center text-[40px] font-semibold tracking-tight text-ink">Create your account.</h1>
-        <p className="mt-2 text-center text-[17px] text-muted">Get early access to AITC.</p>
+        <p className="mt-2 text-center text-[17px] text-muted">Get early access to AiTC.</p>
 
         <form onSubmit={handleSubmit} className="mt-10 space-y-4">
           <div>

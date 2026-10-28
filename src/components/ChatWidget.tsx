@@ -11,7 +11,7 @@ type Message = {
 const INTRO: Message = {
   role: "assistant",
   content:
-    "Hello. Ask me anything about AITC.",
+    "Hello. Ask me anything about AiTC.",
 };
 
 export default function ChatWidget() {
@@ -158,7 +158,7 @@ export default function ChatWidget() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-              placeholder="Ask about AITC"
+              placeholder="Ask about AiTC"
               className="field flex-1 !py-2 !text-[15px]"
             />
             <button

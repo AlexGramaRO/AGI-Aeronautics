@@ -38,10 +38,27 @@ export default function HomePage() {
   return (
     <div>
       <section className="px-6 pb-8 pt-20 text-center sm:pt-28">
-        <h1 className="text-[40px] font-semibold leading-[1.05] tracking-tight text-ink sm:text-[64px] lg:text-[80px]">
-          AITC
+        <h1 className="text-[56px] font-semibold leading-none tracking-[-0.045em] text-ink sm:text-[88px] lg:text-[112px]">
+          A<span className="text-[#0071e3]">i</span>TC
         </h1>
-        <p className="mt-3 text-[21px] text-muted sm:text-[28px]">Air traffic control. Reimagined.</p>
+        <p
+          aria-label="Advanced intelligent Traffic Control"
+          className="mt-5 flex flex-wrap items-baseline justify-center gap-x-5 gap-y-1 text-[18px] font-light tracking-wide text-ink/75 sm:text-[24px]"
+        >
+          <span>
+            <span className="text-[1.2em] font-medium text-[#0071e3]">A</span>dvanced
+          </span>
+          <span>
+            <span className="text-[1.2em] font-medium text-[#0071e3]">i</span>ntelligent
+          </span>
+          <span>
+            <span className="text-[1.2em] font-medium text-[#0071e3]">T</span>raffic
+          </span>
+          <span>
+            <span className="text-[1.2em] font-medium text-[#0071e3]">C</span>ontrol
+          </span>
+        </p>
+        <p className="mt-4 text-[21px] text-muted sm:text-[28px]">Air traffic control. Reimagined.</p>
         <div className="mt-6 flex items-center justify-center gap-8">
           <Link href="/register" className="apple-link">
             Request access &gt;
@@ -58,7 +75,7 @@ export default function HomePage() {
             On any screen.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[17px] leading-relaxed text-muted sm:text-[21px]">
-            AITC runs in the browser. The same simulator on an iMac, a MacBook, and an iPad. No install. No special hardware.
+            AiTC runs in the browser. The same simulator on an iMac, a MacBook, and an iPad. No install. No special hardware.
           </p>
         </div>
         <div className="mt-16">
@@ -73,7 +90,7 @@ export default function HomePage() {
           Every position.
         </h2>
         <p className="mt-5 text-[17px] leading-relaxed text-muted sm:text-[21px]">
-          From ground and tower to approach and en-route, AITC gives students, instructors, and researchers a shared place to run realistic exercises. It stays in the browser, with an AI layer that understands aviation.
+          From ground and tower to approach and en-route, AiTC gives students, instructors, and researchers a shared place to run realistic exercises. It stays in the browser, with an AI layer that understands aviation.
         </p>
       </section>
 

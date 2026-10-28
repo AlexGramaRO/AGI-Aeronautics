@@ -29,7 +29,7 @@ const schema = z.object({
     .optional(),
 });
 
-const SYSTEM_PROMPT = `You are the AGI Aeronautics assistant, embedded on the AGI Aeronautics website (AITC - an AI-driven, web-based air traffic control simulator platform).
+const SYSTEM_PROMPT = `You are the AGI Aeronautics assistant, embedded on the AGI Aeronautics website (AiTC - an AI-driven, web-based air traffic control simulator platform).
 
 Rules:
 - Answer ONLY using the "KNOWLEDGE BASE CONTEXT" provided below. Do not use outside knowledge about aviation, air traffic control, or anything else.
