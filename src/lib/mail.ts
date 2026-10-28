@@ -68,7 +68,7 @@ export async function fetchRecentGmail(limit = 80): Promise<SyncedMail[]> {
   const lock = await client.getMailboxLock("INBOX");
   try {
     const status = await client.status("INBOX", { messages: true });
-    const total = status.messages || 0;
+    const total = status ? status.messages || 0 : 0;
     if (total === 0) return [];
     const start = Math.max(1, total - limit + 1);
 
@@ -93,6 +93,8 @@ export async function fetchRecentGmail(limit = 80): Promise<SyncedMail[]> {
       const gmailId = envelope?.messageId || `uid:${message.uid}`;
       const direction = from === ours ? "OUTBOUND" : "INBOUND";
       const seen = message.flags?.has("\\Seen") ?? false;
+      const rawDate = envelope?.date;
+      const occurredAt = rawDate instanceof Date ? rawDate : rawDate ? new Date(rawDate) : new Date();
 
       messages.push({
         gmailId,
@@ -102,7 +104,7 @@ export async function fetchRecentGmail(limit = 80): Promise<SyncedMail[]> {
         subject: envelope?.subject || "(no subject)",
         body: body.slice(0, 20000),
         unread: direction === "INBOUND" && !seen,
-        occurredAt: envelope?.date || new Date(),
+        occurredAt,
       });
     }
   } finally {

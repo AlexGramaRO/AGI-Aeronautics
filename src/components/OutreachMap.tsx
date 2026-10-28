@@ -128,7 +128,7 @@ export default function OutreachMap() {
 
       map.on("mousedown", (event: LeafletMouseEvent) => {
         if (!drawRef.current.drawing) return;
-        map.dragging.disable();
+        map.dragging?.disable();
         drawRef.current.start = event.latlng;
         drawRef.current.rect = L.rectangle(L.latLngBounds(event.latlng, event.latlng), {
           color: "#0071e3",
@@ -156,7 +156,7 @@ export default function OutreachMap() {
         draw.rect = null;
         draw.start = null;
         draw.drawing = false;
-        map.dragging.enable();
+        map.dragging?.enable();
       });
     })();
 
