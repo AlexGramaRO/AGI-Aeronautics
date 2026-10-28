@@ -5,6 +5,7 @@ import { isStaffRole } from "@/lib/roles";
 import { extractText } from "@/lib/parseDocument";
 import { chunkText } from "@/lib/chunking";
 import { embedTexts } from "@/lib/openai";
+import { packEmbedding } from "@/lib/embedding";
 
 export const runtime = "nodejs";
 export const maxDuration = 120;
@@ -93,7 +94,7 @@ export async function POST(request: NextRequest) {
         create: chunks.map((chunk, i) => ({
           chunkIndex: chunk.index,
           content: chunk.content,
-          embedding: embeddings[i],
+          embedding: packEmbedding(embeddings[i]) as never,
         })),
       },
     },

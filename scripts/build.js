@@ -16,5 +16,6 @@ if (onCloudflare && process.env.OPENNEXT_BUILDING !== "1") {
   run("opennextjs-cloudflare", ["build"], { OPENNEXT_BUILDING: "1" });
 } else {
   run("prisma", ["generate"]);
+  run("prisma", ["generate", "--schema", "prisma/schema.d1.prisma"]);
   run("next", ["build"]);
 }

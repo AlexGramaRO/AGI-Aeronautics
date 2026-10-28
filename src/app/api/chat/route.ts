@@ -3,6 +3,7 @@ import { z } from "zod";
 import { prisma } from "@/lib/db";
 import { embedText, getOpenAI, CHAT_MODEL } from "@/lib/openai";
 import { topKSimilar } from "@/lib/similarity";
+import { unpackEmbedding } from "@/lib/embedding";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -70,7 +71,14 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const top = topKSimilar(queryEmbedding, chunkRows, TOP_K).filter(
+  const top = topKSimilar(
+    queryEmbedding,
+    chunkRows.map((row) => ({
+      ...row,
+      embedding: unpackEmbedding(row.embedding as number[] | string),
+    })),
+    TOP_K
+  ).filter(
     (r) => r.score >= SIMILARITY_THRESHOLD
   );
 

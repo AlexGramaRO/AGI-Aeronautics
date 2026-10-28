@@ -39,9 +39,9 @@ export async function POST(request: NextRequest) {
         subject: draft.subject,
         text: draft.body,
       });
-      await prisma.$transaction([
-        prisma.mailDraft.update({ where: { id: draft.id }, data: { status: "SENT" } }),
-        prisma.mailMessage.create({
+      await prisma.mailDraft.update({ where: { id: draft.id }, data: { status: "SENT" } });
+      try {
+        await prisma.mailMessage.create({
           data: {
             organizationId: draft.organizationId,
             direction: "OUTBOUND",
@@ -52,8 +52,11 @@ export async function POST(request: NextRequest) {
             gmailId: result.messageId,
             unread: false,
           },
-        }),
-      ]);
+        });
+      } catch (error) {
+        await prisma.mailDraft.update({ where: { id: draft.id }, data: { status: "PENDING" } }).catch(() => null);
+        throw error;
+      }
       sent.push(draft.id);
     } catch (error) {
       failed.push(error instanceof Error ? error.message : "Send failed.");

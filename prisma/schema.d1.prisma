@@ -1,0 +1,135 @@
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../src/generated/d1"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./d1.sqlite"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  organization String?
+  role         String   @default("USER")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  documents Document[]
+}
+
+model Document {
+  id           String   @id @default(cuid())
+  filename     String
+  mimeType     String
+  charCount    Int
+  chunkCount   Int
+  uploadedBy   User?    @relation(fields: [uploadedById], references: [id], onDelete: SetNull)
+  uploadedById String?
+  createdAt    DateTime @default(now())
+
+  chunks KnowledgeChunk[]
+}
+
+model KnowledgeChunk {
+  id         String   @id @default(cuid())
+  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  documentId String
+  chunkIndex Int
+  content    String
+  embedding  String
+  createdAt  DateTime @default(now())
+
+  @@index([documentId])
+}
+
+model Inquiry {
+  id           String   @id @default(cuid())
+  name         String
+  email        String
+  organization String?
+  message      String
+  context      String?
+  source       String   @default("CONTACT_FORM")
+  status       String   @default("NEW")
+  createdAt    DateTime @default(now())
+}
+
+model AppSetting {
+  key   String @id
+  value String
+}
+
+model Organization {
+  id                String   @id @default(cuid())
+  name              String   @unique
+  kind              String
+  country           String
+  city              String
+  lat               Float
+  lng               Float
+  website           String?
+  atmSystem         String?
+  simulatorKind     String   @default("UNKNOWN")
+  simulatorVendor   String?
+  simulatorAcquired String?
+  simulatorPrice    String?
+  notes             String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  contacts Contact[]
+  drafts   MailDraft[]
+  messages MailMessage[]
+}
+
+model Contact {
+  id             String       @id @default(cuid())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId String
+  name           String?
+  title          String?
+  email          String?
+  createdAt      DateTime     @default(now())
+
+  @@index([organizationId])
+  @@index([email])
+}
+
+model MailDraft {
+  id             String       @id @default(cuid())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId String
+  toEmail        String
+  subject        String
+  body           String
+  note           String
+  status         String       @default("PENDING")
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  @@index([organizationId])
+  @@index([status])
+}
+
+model MailMessage {
+  id             String        @id @default(cuid())
+  organization   Organization? @relation(fields: [organizationId], references: [id], onDelete: SetNull)
+  organizationId String?
+  direction      String
+  fromEmail      String
+  toEmail        String
+  subject        String
+  body           String
+  gmailId        String?       @unique
+  unread         Boolean       @default(false)
+  occurredAt     DateTime      @default(now())
+  createdAt      DateTime      @default(now())
+
+  @@index([organizationId])
+  @@index([unread])
+}

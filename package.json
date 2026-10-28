@@ -16,6 +16,7 @@
     "release": "prisma migrate deploy && tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@prisma/adapter-d1": "^5.22.0",
     "@prisma/adapter-pg": "^5.22.0",
     "@prisma/client": "^5.20.0",
     "bcryptjs": "^2.4.3",

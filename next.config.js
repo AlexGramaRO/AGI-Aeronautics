@@ -14,8 +14,7 @@ const nextConfig = {
     "mailparser",
     "@prisma/client",
     ".prisma/client",
-    "@prisma/adapter-pg",
-    "pg",
+    "@prisma/adapter-d1",
   ],
 };
 

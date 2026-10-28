@@ -16,5 +16,15 @@
       "binding": "WORKER_SELF_REFERENCE",
       "service": "agi-aeronautics"
     }
-  ]
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "database_agi_aeronautics",
+      "database_id": "2bed0fdb-1b38-453f-be5b-cc9a26aa44be"
+    }
+  ],
+  "vars": {
+    "CLOUDFLARE_D1_DATABASE_ID": "2bed0fdb-1b38-453f-be5b-cc9a26aa44be"
+  }
 }
