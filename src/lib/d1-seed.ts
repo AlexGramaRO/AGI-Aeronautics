@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import { ORGANIZATIONS } from "../../prisma/data/organizations";
+import { ORGANIZATIONS, organizationSeedData, publishedContacts } from "../../prisma/data/organizations";
 
 type SeedClient = {
   user: {
@@ -10,21 +10,19 @@ type SeedClient = {
     }) => Promise<unknown>;
   };
   organization: {
-    count: () => Promise<number>;
+    findUnique: (args: {
+      where: { name: string };
+      include: { contacts: true };
+    }) => Promise<{ id: string; contacts: { email: string | null }[] } | null>;
+    update: (args: { where: { name: string }; data: Record<string, unknown> }) => Promise<unknown>;
     create: (args: {
-      data: {
-        name: string;
-        kind: string;
-        country: string;
-        city: string;
-        lat: number;
-        lng: number;
-        website?: string;
-        atmSystem?: string;
-        notes?: string;
+      data: Record<string, unknown> & {
         contacts?: { create: { email: string; title: string }[] };
       };
     }) => Promise<unknown>;
+  };
+  contact: {
+    create: (args: { data: { organizationId: string; email: string; title: string } }) => Promise<unknown>;
   };
 };
 
@@ -42,24 +40,29 @@ export async function seedD1(prisma: SeedClient) {
     });
   }
 
-  if ((await prisma.organization.count()) > 0) return;
-
   for (const org of ORGANIZATIONS) {
-    await prisma.organization.create({
-      data: {
-        name: org.name,
-        kind: org.kind,
-        country: org.country,
-        city: org.city,
-        lat: org.lat,
-        lng: org.lng,
-        website: org.website,
-        atmSystem: org.atmSystem,
-        notes: org.notes,
-        contacts: org.email
-          ? { create: [{ email: org.email, title: org.contactTitle || "Public enquiry" }] }
-          : undefined,
-      },
+    const data = organizationSeedData(org);
+    const contacts = publishedContacts(org);
+    const exists = await prisma.organization.findUnique({
+      where: { name: org.name },
+      include: { contacts: true },
     });
+    if (!exists) {
+      await prisma.organization.create({
+        data: {
+          ...data,
+          contacts: contacts.length ? { create: contacts } : undefined,
+        },
+      });
+      continue;
+    }
+    await prisma.organization.update({ where: { name: org.name }, data });
+    const have = new Set(exists.contacts.map((contact) => contact.email?.toLowerCase()).filter(Boolean));
+    for (const contact of contacts) {
+      if (have.has(contact.email.toLowerCase())) continue;
+      await prisma.contact.create({
+        data: { organizationId: exists.id, email: contact.email, title: contact.title },
+      });
+    }
   }
 }

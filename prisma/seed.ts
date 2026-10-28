@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
-import { ORGANIZATIONS } from "./data/organizations";
+import { ORGANIZATIONS, organizationSeedData, publishedContacts } from "./data/organizations";
 
 const prisma = new PrismaClient();
 
@@ -35,28 +35,33 @@ async function main() {
   }
 
   let created = 0;
+  let updated = 0;
   for (const org of ORGANIZATIONS) {
-    const exists = await prisma.organization.findUnique({ where: { name: org.name } });
-    if (exists) continue;
-    await prisma.organization.create({
-      data: {
-        name: org.name,
-        kind: org.kind,
-        country: org.country,
-        city: org.city,
-        lat: org.lat,
-        lng: org.lng,
-        website: org.website,
-        atmSystem: org.atmSystem,
-        notes: org.notes,
-        contacts: org.email
-          ? { create: [{ email: org.email, title: org.contactTitle || "Public enquiry" }] }
-          : undefined,
-      },
+    const data = organizationSeedData(org);
+    const contacts = publishedContacts(org);
+    const exists = await prisma.organization.findUnique({
+      where: { name: org.name },
+      include: { contacts: true },
     });
-    created += 1;
+    if (!exists) {
+      await prisma.organization.create({
+        data: {
+          ...data,
+          contacts: contacts.length ? { create: contacts } : undefined,
+        },
+      });
+      created += 1;
+      continue;
+    }
+    await prisma.organization.update({ where: { name: org.name }, data });
+    const have = new Set(exists.contacts.map((contact) => contact.email?.toLowerCase()).filter(Boolean));
+    for (const contact of contacts) {
+      if (have.has(contact.email.toLowerCase())) continue;
+      await prisma.contact.create({ data: { organizationId: exists.id, email: contact.email, title: contact.title } });
+    }
+    updated += 1;
   }
-  console.log(`[seed] Organizations added: ${created}`);
+  console.log(`[seed] Organizations added: ${created}, updated: ${updated}`);
 }
 
 main()
