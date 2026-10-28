@@ -30,7 +30,8 @@ function LoginForm() {
       }
 
       const next = searchParams.get("next");
-      router.push(next && next.startsWith("/") ? next : data.user.role === "ADMIN" ? "/admin" : "/dashboard");
+      const staff = data.user.role === "ADMIN" || data.user.role === "SUPERADMIN";
+      router.push(next && next.startsWith("/") ? next : staff ? "/admin" : "/dashboard");
       router.refresh();
     } catch {
       setError("Connection error. Please try again.");

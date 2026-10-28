@@ -73,3 +73,36 @@ body {
 .apple-link:hover {
   text-decoration: underline;
 }
+
+.outreach-pin {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #1d1d1f;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9);
+}
+
+.outreach-pin.is-selected {
+  background: #0071e3;
+  box-shadow: 0 0 0 6px rgba(0, 113, 227, 0.25);
+}
+
+.outreach-badge {
+  position: absolute;
+  top: -10px;
+  right: -12px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #0071e3;
+  color: white;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.outreach-badge.is-read {
+  background: #6e6e73;
+}

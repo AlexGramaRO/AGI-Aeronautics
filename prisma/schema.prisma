@@ -10,6 +10,31 @@ datasource db {
 enum Role {
   USER
   ADMIN
+  SUPERADMIN
+}
+
+enum OrgKind {
+  ANSP
+  TRAINING_ACADEMY
+  UNIVERSITY
+  OTHER
+}
+
+enum SimulatorKind {
+  UNKNOWN
+  RADAR
+  TOWER
+  RADAR_AND_TOWER
+}
+
+enum DraftStatus {
+  PENDING
+  SENT
+}
+
+enum MailDirection {
+  INBOUND
+  OUTBOUND
 }
 
 enum InquirySource {
@@ -71,4 +96,79 @@ model Inquiry {
   source       InquirySource @default(CONTACT_FORM)
   status       InquiryStatus @default(NEW)
   createdAt    DateTime      @default(now())
+}
+
+model AppSetting {
+  key   String @id
+  value String
+}
+
+model Organization {
+  id                 String         @id @default(cuid())
+  name               String         @unique
+  kind               OrgKind
+  country            String
+  city               String
+  lat                Float
+  lng                Float
+  website            String?
+  atmSystem          String?
+  simulatorKind      SimulatorKind  @default(UNKNOWN)
+  simulatorVendor    String?
+  simulatorAcquired  String?
+  simulatorPrice     String?
+  notes              String?
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+
+  contacts Contact[]
+  drafts   MailDraft[]
+  messages MailMessage[]
+}
+
+model Contact {
+  id             String       @id @default(cuid())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId String
+  name           String?
+  title          String?
+  email          String?
+  createdAt      DateTime     @default(now())
+
+  @@index([organizationId])
+  @@index([email])
+}
+
+model MailDraft {
+  id             String       @id @default(cuid())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId String
+  toEmail        String
+  subject        String
+  body           String
+  note           String
+  status         DraftStatus  @default(PENDING)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  @@index([organizationId])
+  @@index([status])
+}
+
+model MailMessage {
+  id             String        @id @default(cuid())
+  organization   Organization? @relation(fields: [organizationId], references: [id], onDelete: SetNull)
+  organizationId String?
+  direction      MailDirection
+  fromEmail      String
+  toEmail        String
+  subject        String
+  body           String
+  gmailId        String?       @unique
+  unread         Boolean       @default(false)
+  occurredAt     DateTime      @default(now())
+  createdAt      DateTime      @default(now())
+
+  @@index([organizationId])
+  @@index([unread])
 }

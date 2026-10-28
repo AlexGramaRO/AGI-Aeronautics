@@ -17,7 +17,7 @@ export type SessionPayload = {
   sub: string;
   email: string;
   name: string;
-  role: "USER" | "ADMIN";
+  role: "USER" | "ADMIN" | "SUPERADMIN";
 };
 
 export async function signSession(payload: SessionPayload): Promise<string> {

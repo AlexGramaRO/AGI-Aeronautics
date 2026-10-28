@@ -1,5 +1,6 @@
 import { cookies } from "next/headers";
 import { SESSION_COOKIE, verifySession, type SessionPayload } from "./auth";
+import { isStaffRole } from "./roles";
 
 export async function getCurrentUser(): Promise<SessionPayload | null> {
   const token = cookies().get(SESSION_COOKIE)?.value;
@@ -15,6 +16,6 @@ export async function requireUser(): Promise<SessionPayload> {
 
 export async function requireAdmin(): Promise<SessionPayload> {
   const user = await getCurrentUser();
-  if (!user || user.role !== "ADMIN") throw new Error("FORBIDDEN");
+  if (!user || !isStaffRole(user.role)) throw new Error("FORBIDDEN");
   return user;
 }

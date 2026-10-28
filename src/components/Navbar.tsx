@@ -42,7 +42,7 @@ export default function Navbar({ user }: { user: SessionPayload | null }) {
         <div className="hidden items-center gap-5 md:flex">
           {user ? (
             <>
-              {user.role === "ADMIN" && (
+              {(user.role === "ADMIN" || user.role === "SUPERADMIN") && (
                 <Link href="/admin" className="text-[12px] text-ink/80 hover:text-ink">
                   Admin
                 </Link>
@@ -83,7 +83,7 @@ export default function Navbar({ user }: { user: SessionPayload | null }) {
             ))}
             {user ? (
               <>
-                {user.role === "ADMIN" && (
+                {(user.role === "ADMIN" || user.role === "SUPERADMIN") && (
                   <Link href="/admin" className="text-[17px] text-ink">
                     Admin
                   </Link>

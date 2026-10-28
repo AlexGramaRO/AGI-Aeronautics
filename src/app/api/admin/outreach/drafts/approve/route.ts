@@ -1,0 +1,64 @@
+import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
+import { prisma } from "@/lib/db";
+import { getCurrentUser } from "@/lib/session";
+import { isStaffRole } from "@/lib/roles";
+import { sendGmail } from "@/lib/mail";
+
+const schema = z.object({
+  ids: z.array(z.string()).optional(),
+  all: z.boolean().optional(),
+});
+
+export async function POST(request: NextRequest) {
+  const user = await getCurrentUser();
+  if (!user || !isStaffRole(user.role)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  const body = await request.json().catch(() => null);
+  const parsed = schema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: "Nothing to approve." }, { status: 400 });
+  }
+
+  const drafts = await prisma.mailDraft.findMany({
+    where: {
+      status: "PENDING",
+      ...(parsed.data.all ? {} : { id: { in: parsed.data.ids || [] } }),
+    },
+  });
+
+  const sent: string[] = [];
+  const failed: string[] = [];
+
+  for (const draft of drafts) {
+    try {
+      const result = await sendGmail({
+        to: draft.toEmail,
+        subject: draft.subject,
+        text: draft.body,
+      });
+      await prisma.$transaction([
+        prisma.mailDraft.update({ where: { id: draft.id }, data: { status: "SENT" } }),
+        prisma.mailMessage.create({
+          data: {
+            organizationId: draft.organizationId,
+            direction: "OUTBOUND",
+            fromEmail: (process.env.GMAIL_USER || "").toLowerCase(),
+            toEmail: draft.toEmail,
+            subject: draft.subject,
+            body: draft.body,
+            gmailId: result.messageId,
+            unread: false,
+          },
+        }),
+      ]);
+      sent.push(draft.id);
+    } catch (error) {
+      failed.push(error instanceof Error ? error.message : "Send failed.");
+    }
+  }
+
+  return NextResponse.json({ sent: sent.length, failed });
+}

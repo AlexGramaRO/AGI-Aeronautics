@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
+import { isStaffRole } from "@/lib/roles";
 import { extractText } from "@/lib/parseDocument";
 import { chunkText } from "@/lib/chunking";
 import { embedTexts } from "@/lib/openai";
@@ -10,7 +11,7 @@ export const maxDuration = 120;
 
 async function assertAdmin() {
   const user = await getCurrentUser();
-  if (!user || user.role !== "ADMIN") {
+  if (!user || !isStaffRole(user.role)) {
     return null;
   }
   return user;
