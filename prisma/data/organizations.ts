@@ -1,3 +1,4 @@
+import type { SimulatorKind } from "@prisma/client";
 import { EXTRA_ORGANIZATIONS } from "./coverage";
 
 export type SeedOrg = {
@@ -46,7 +47,7 @@ export function organizationSeedData(org: SeedOrg) {
     lng: org.lng,
     website: org.website ?? null,
     atmSystem: org.atmSystem ?? null,
-    simulatorKind: org.simulatorKind ?? "UNKNOWN",
+    simulatorKind: (org.simulatorKind ?? "UNKNOWN") as SimulatorKind,
     simulatorVendor: org.simulatorVendor ?? null,
     simulatorAcquired: org.simulatorAcquired ?? null,
     notes: org.notes ?? null,
