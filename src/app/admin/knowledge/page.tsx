@@ -20,7 +20,7 @@ const PACKAGES = [
   {
     href: "/knowledge/aitc-outreach-strategy.pdf",
     filename: "aitc-outreach-strategy.pdf",
-    label: "Add the contact strategy",
+    label: "Replace the sales guide",
   },
 ];
 
@@ -119,7 +119,7 @@ export default function KnowledgeBasePage() {
 
       <Collection
         title="Administrator knowledge"
-        detail="Every file here is searched together when you use the staff assistant. Upload more than one PDF. The directory and the strategy are the two packages prepared for this collection."
+        detail="Every file here is searched together when you use the staff assistant. The directory lists organisations. The sales guide is the book on how to sell AiTC. Replace the sales guide after a new version is published, so the assistant uses the latest text."
         documents={documents.filter((doc) => doc.audience === "ADMIN")}
         loading={loading}
         busy={busy === "ADMIN"}

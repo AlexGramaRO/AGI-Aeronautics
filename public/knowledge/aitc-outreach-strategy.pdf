@@ -3,111 +3,105 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Count 3 /Kids [5 0 R 7 0 R 9 0 R] >>
+<< /Type /Pages /Count 19 /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R] >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 4 0 obj
-<< /Length 3456 >>
+<< /Length 3395 >>
 stream
 BT
 /F1 10 Tf
 13 TL
 46 760 Td
-(SECTION: AiTC contact strategy. What this document is. This is the AGI Aeronautics marketing) Tj
+(SECTION: AiTC sales guide. How to use this book. This is the AGI Aeronautics sales guide for) Tj
 T*
-(and first-contact strategy for AiTC. It describes the product, how to write the first email,) Tj
+(AiTC. It teaches how to sell the platform. Read it as a working book: the marketing idea) Tj
 T*
-(how to follow up when there is no reply, how to follow up when there is a reply, how to ask) Tj
+(first, then how that idea is applied to AiTC, then the words you can use. It is for you, the) Tj
 T*
-(for a trial, and how the licence is structured. AGI Aeronautics confirms any price in a) Tj
+(person writing to air navigation services, academies, and universities. It is not a public) Tj
 T*
-(written proposal. This document does not set a public price.) Tj
-T*
-() Tj
-T*
-(SECTION: AiTC product. Browser radar and tower. AiTC runs both radar simulations and tower) Tj
-T*
-(simulations directly in the browser. A training session can start on the hardware that is) Tj
-T*
-(already in the room. The same exercise can be opened from another location without) Tj
-T*
-(installing a separate simulator application for that operating system.) Tj
+(brochure.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC product. Hardware and operating system. AiTC is hardware-agnostic. It does not) Tj
+(SECTION: AiTC sales guide. How to use this book. What the book will and will not do. The) Tj
 T*
-(depend on one operating system. An academy, a university, or an air navigation service can) Tj
+(book teaches positioning, the buyer, the message, the first email, the follow-up, the trial,) Tj
 T*
-(run an exercise on the computers it already has, because the simulation is delivered in the) Tj
+(the demonstration, objections, and the two licence shapes. It includes every AiTC capability) Tj
 T*
-(browser.) Tj
+(that is part of the product. It does not contain a public price. AGI Aeronautics states the) Tj
 T*
-() Tj
+(figure in the written proposal for that organisation. It does not invent customers, results,) Tj
 T*
-(SECTION: AiTC product. Airspace creation. Airspace is created inside AiTC. It can be drawn) Tj
-T*
-(manually, or it can be created with the artificial intelligence in the platform. The source) Tj
-T*
-(can be a file from another simulator, an aeronautical information publication, or another) Tj
-T*
-(file that contains the airspace information. An entire country airspace can be created) Tj
-T*
-(within minutes.) Tj
+(or meetings.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC product. Exercise creation and preview. Exercises are created inside AiTC. The) Tj
+(SECTION: AiTC sales guide. How to use this book. How to ask the staff assistant. Ask one) Tj
 T*
-(exercise-creation module can preview the exercise before it is used in training. The person) Tj
+(question at a time. Ask "how do I explain the replay" or "what do I write when an academy) Tj
 T*
-(creating the exercise can test it and plan the exact traffic picture they want.) Tj
+(does not reply" or "which licence do I offer a university". The assistant answers from this) Tj
 T*
-() Tj
+(guide and from the organisation directory together. If a fact is not in those documents, the) Tj
 T*
-(SECTION: AiTC product. Exercise assistant. During exercise creation, an artificial) Tj
-T*
-(intelligence assistant accepts voice commands and text commands. A creator can ask for a) Tj
-T*
-(number of aircraft on a specific route, or for particular aircraft types. The creator can) Tj
-T*
-(then adjust by hand where the conflicts occur and where the traffic peak is.) Tj
+(assistant should say so.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC product. Traffic load. For an exercise, AiTC can show the traffic that flows) Tj
+(SECTION: AiTC sales guide. Contents. Part one is the marketing method. Part two is the) Tj
 T*
-(through each sector in that exercise. The creator can see the volume of traffic, or the) Tj
+(buyer. Part three is the product, taught so you can sell each capability. Part four is the) Tj
 T*
-(traffic load, in those sectors.) Tj
+(message for each kind of organisation. Part five is the conversation: first email, silence,) Tj
 T*
-() Tj
+(reply, discovery, trial, and demonstration. Part six is objections, price, the proposal, and) Tj
 T*
-(SECTION: AiTC product. Aircraft scripts. Inside the exercise-creation module, scripts can) Tj
-T*
-(make aircraft carry out actions by themselves. The aircraft follow the script automatically.) Tj
+(what you do after a yes or a no.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC product. AI piloting. AiTC can also use scripts for artificial intelligence) Tj
+(SECTION: AiTC sales guide. Marketing method. What marketing means here. Marketing, in this) Tj
 T*
-(piloting. The aircraft can be piloted by the artificial intelligence, so a human) Tj
+(sale, is the choice of one reader, one problem, and one next step. You are not trying to) Tj
 T*
-(pseudo-pilot is not required at the other end of the exercise.) Tj
+(make AiTC famous in one email. You are trying to earn a short trial with the person who) Tj
+T*
+(trains air traffic controllers, or with the person who can introduce you to them. A feature) Tj
+T*
+(list is not a message. A message says what changes for that reader.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC product. Replay. Training sessions can be recorded and played back in the) Tj
+(SECTION: AiTC sales guide. Marketing method. Attention, relevance, proof, request. Every) Tj
 T*
-(replay module. The playback is not a video recording and it is not an audio recording. It is) Tj
+(email and every demonstration uses the same four moves. Attention: name their organisation) Tj
 T*
-(a scripted recording that reproduces the exercise from the start. Because a script recording) Tj
+(and the training job. Relevance: name one problem they can recognise, such as hardware, a) Tj
 T*
-(is a hundred times smaller, and more, than a video recording, a large number of exercises) Tj
+(missing pseudo-pilot, or airspace that takes too long to build. Proof: offer to show one) Tj
 T*
-(can be stored.) Tj
+(AiTC capability, not to claim a result you have not measured. Request: ask for a trial) Tj
+T*
+(conversation, and only that.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Marketing method. One idea per message. A first email carries one) Tj
+T*
+(idea. If you explain radar, tower, airspace, exercises, artificial intelligence, replay,) Tj
+T*
+(voice, video, and the flight envelope in the first note, the reader remembers none of them.) Tj
+T*
+(Choose the idea that matches the organisation. Save the rest for the reply and the) Tj
+T*
+(demonstration. The book teaches all of the ideas so you can choose, not so you can send them) Tj
+T*
+(all at once.) Tj
 T*
 () Tj
 ET
@@ -117,99 +111,103 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
 endobj
 6 0 obj
-<< /Length 3322 >>
+<< /Length 3780 >>
 stream
 BT
 /F1 10 Tf
 13 TL
 46 760 Td
-(SECTION: AiTC product. Voice and video. Voice communication runs in the browser. Users who) Tj
+(SECTION: AiTC sales guide. Marketing method. Specificity is the proof you have. You do not) Tj
 T*
-(are connected to the same session can use simulated ground-to-air lines and ground-to-ground) Tj
+(yet put a customer count or a percentage improvement in the letter, because this guide does) Tj
 T*
-(lines. The voice system also supports video calling. In remote training, the instructor can) Tj
+(not contain those figures. Specificity comes from their world: their city, their training) Tj
 T*
-(see the trainee during the session.) Tj
+(role, their airspace, their published mailbox. Then it comes from a precise AiTC fact, such) Tj
 T*
-() Tj
+(as "a country airspace can be created within minutes from an aeronautical information) Tj
 T*
-(SECTION: AiTC product. Flight envelope. The aircraft database uses a detailed flight) Tj
-T*
-(envelope for each aircraft. Aircraft speed and altitude are not taken from a simple value) Tj
-T*
-(table. The aircraft in the simulation follows that flight-envelope model. A student can open) Tj
-T*
-(the flight-envelope graphic inside the simulation and see the limitations of the aircraft.) Tj
+(publication". Vague praise does not sell. A precise fact does.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC first contact. Who receives the email. Write to the published institutional) Tj
+(SECTION: AiTC sales guide. Marketing method. The offer is a trial, not a contract. The first) Tj
 T*
-(mailbox for that organisation. Use the email stored on the outreach map. Do not write to a) Tj
+(commercial offer is a trial of AiTC. A trial is a designed session in which they see radar) Tj
 T*
-(named personal mailbox when the directory gives an office, enquiry, or training mailbox. One) Tj
+(and tower in the browser, on hardware they already have. You do not open with a licence, a) Tj
 T*
-(organisation receives one first email.) Tj
+(signature, or a price. Price comes after they have agreed that the training problem is real) Tj
 T*
-() Tj
+(and after they have seen the platform. The two licence shapes are explained later in this) Tj
 T*
-(SECTION: AiTC first contact. Subject and opening. The subject names AiTC and the) Tj
-T*
-(organisation. The first paragraph says that the sender is AGI Aeronautics and that AiTC is a) Tj
-T*
-(browser air traffic control simulator for radar and tower training. Do not claim that a) Tj
-T*
-(meeting is already arranged. Do not claim that the organisation has already agreed to) Tj
-T*
-(anything.) Tj
+(book.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC first contact. One relevant capability. The second paragraph names one) Tj
+(SECTION: AiTC sales guide. Marketing method. Trust is what you refuse to say. You earn trust) Tj
 T*
-(capability that matches the recipient. For an academy or university, that can be exercise) Tj
+(by leaving out claims you cannot show. You do not say they already agreed to a meeting. You) Tj
 T*
-(creation, preview, and artificial intelligence piloting so a human pseudo-pilot is not) Tj
+(do not say a country has been contacted unless the map shows a sent message. You do not name) Tj
 T*
-(required. For an air navigation service, that can be creating their airspace from their own) Tj
+(a simulator vendor or an ATM system that is not in the organisation record. You do not quote) Tj
 T*
-(files, including an aeronautical information publication, within minutes. Keep the email) Tj
-T*
-(short.) Tj
+(another provider's contract as the price of AiTC.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC first contact. The ask. Close by asking for a short conversation about a) Tj
+(SECTION: AiTC sales guide. The buyer. Three kinds of organisation. AiTC is offered to three) Tj
 T*
-(trial. Offer to show radar and tower in the browser, on hardware they already use. Sign the) Tj
+(kinds of organisation. An air navigation service trains controllers for its own operation) Tj
 T*
-(message as AGI Aeronautics. The mailbox signature is added when the message is sent from the) Tj
+(and cares about its own airspace. A training academy runs courses and cares about instructor) Tj
 T*
-(outbox.) Tj
+(time, exercises, and equipment. A university teaches aviation and cares about access for) Tj
 T*
-() Tj
-T*
-(SECTION: AiTC follow-up when there is no reply. Wait several working days after the first) Tj
-T*
-(email. Send one follow-up that refers to the first message and repeats the trial offer in) Tj
-T*
-(fewer words. If there is still no reply, send one second follow-up and then stop. Do not) Tj
-T*
-(write that they asked for a proposal. Do not invent a deadline they agreed to.) Tj
+(students on ordinary computers. The product is the same. The first sentence changes.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC follow-up when they reply. Answer the question they asked. If they ask about) Tj
+(SECTION: AiTC sales guide. The buyer. The sale is to a group. One mailbox receives the) Tj
 T*
-(hardware, say that AiTC runs in the browser and does not depend on a particular operating) Tj
+(email. Several people decide. The training manager cares whether the exercise can be built) Tj
 T*
-(system. If they ask about airspace, say that airspace can be created in the platform from) Tj
+(and previewed. The instructor cares whether a human pseudo-pilot is required and whether a) Tj
 T*
-(their files and that a country airspace can be created within minutes. If they ask about) Tj
+(remote trainee can be seen. The technical reader cares that the simulation runs in the) Tj
 T*
-(instructors in another location, say that the browser voice system includes video, so the) Tj
+(browser and does not depend on one operating system. The person who pays cares whether the) Tj
 T*
-(instructor can see the trainee during a remote session.) Tj
+(licence is per user or for the organisation. Write the first email to the training problem.) Tj
+T*
+(Expect the other questions later.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The buyer. The training manager. The training manager owns the) Tj
+T*
+(quality of the exercise. Speak to that person about creating the exercise inside AiTC,) Tj
+T*
+(previewing it before the session, placing a chosen number of aircraft on a route, and then) Tj
+T*
+(moving the conflict and the traffic peak by hand. Also speak about seeing the traffic load) Tj
+T*
+(in each sector. That is the manager's control over the lesson.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The buyer. The instructor. The instructor has to run the session.) Tj
+T*
+(Speak about artificial intelligence piloting, so a human does not have to sit at the other) Tj
+T*
+(end and fly the aircraft. Speak about scripts that make aircraft act automatically. Speak) Tj
+T*
+(about voice in the browser, ground-to-air and ground-to-ground. If the student is in another) Tj
+T*
+(place, speak about video, so the instructor can see the trainee during the session. Speak) Tj
+T*
+(about replay, so the debrief is the exercise again, not a video file.) Tj
 T*
 () Tj
 ET
@@ -219,69 +217,105 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
 endobj
 8 0 obj
-<< /Length 2426 >>
+<< /Length 3782 >>
 stream
 BT
 /F1 10 Tf
 13 TL
 46 760 Td
-(SECTION: AiTC follow-up when they reply. Next step. After answering, offer a trial on a) Tj
+(SECTION: AiTC sales guide. The buyer. The technical reader. The technical reader asks what) Tj
 T*
-(sample exercise or on airspace they supply. Say that exercises can be previewed in the) Tj
+(must be installed. The answer is a browser. AiTC runs radar and tower in the browser. It is) Tj
 T*
-(exercise-creation module, and that artificial intelligence can pilot the aircraft so they do) Tj
+(hardware-agnostic. It does not depend on the operating system. An exercise can be opened in) Tj
 T*
-(not need a person at the other end. If the reply is a refusal, thank them and do not keep) Tj
+(another location on the computers already in the room. Do not promise a particular server) Tj
 T*
-(following up.) Tj
-T*
-() Tj
-T*
-(SECTION: AiTC trial. What to show. A trial shows radar and tower in the browser. It shows an) Tj
-T*
-(exercise created in the platform and previewed before it is run. It can show aircraft placed) Tj
-T*
-(by the assistant, then adjusted by hand so the conflict and the traffic peak sit where the) Tj
-T*
-(instructor wants them. It can show the traffic load in each sector of that exercise. It can) Tj
-T*
-(show a scripted replay of the session, which is stored as a script rather than as a video.) Tj
+(size, a particular browser version, or a certification that this guide does not state.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC trial. What the organisation needs. The organisation needs a browser and the) Tj
+(SECTION: AiTC sales guide. The buyer. The person who pays. The person who pays asks how the) Tj
 T*
-(computers it already has. It does not need a dedicated operating system and it does not need) Tj
+(licence is shaped before they ask for a number. Explain the two shapes. A per-user licence) Tj
 T*
-(a human pseudo-pilot for an exercise that uses artificial intelligence piloting. If they) Tj
+(is a price for each person who uses AiTC. An organisation licence is one agreement for the) Tj
 T*
-(want their own airspace, they can provide a simulator file, an aeronautical information) Tj
+(academy, the university, or the air navigation service. Then say that AGI Aeronautics puts) Tj
 T*
-(publication, or another file that contains the airspace information.) Tj
-T*
-() Tj
-T*
-(SECTION: AiTC pricing. Licence shapes. AiTC is offered as a per-user licence or as an) Tj
-T*
-(organisation licence. A per-user licence is a price for each person who uses the platform.) Tj
-T*
-(An organisation licence is one agreement for an academy, a university, or an air navigation) Tj
-T*
-(service. AGI Aeronautics states the figure in the written proposal for that organisation. Do) Tj
-T*
-(not put a price in an email unless that figure is in the proposal you are sending.) Tj
+(the figure in the proposal. Do not invent a number in the email.) Tj
 T*
 () Tj
 T*
-(SECTION: AiTC pricing. What not to say. Do not quote a network-wide contract as if it were) Tj
+(SECTION: AiTC sales guide. The buyer. How to tell which reader you have. Read the) Tj
 T*
-(the price of one academy purchase. Do not state a simulator vendor, an ATM system, or a) Tj
+(organisation record before you write. An air navigation service record often names an) Tj
 T*
-(contact email that is not in the organisation record. Do not say that a country has already) Tj
+(aeronautical information mailbox. A training academy record names a school. A university) Tj
 T*
-(been contacted unless the correspondence for that location shows a sent message. Do not say) Tj
+(record names a faculty. If the record has no published email, do not guess an address. Use) Tj
 T*
-(that a reply has been received unless the correspondence shows a received message.) Tj
+(the correspondence on the map to see whether anyone has already been written to, and whether) Tj
+T*
+(a reply has arrived.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The problem. Sell the change, not the module names. The reader) Tj
+T*
+(already has some way to train. Your job is to name a change AiTC makes possible. The changes) Tj
+T*
+(you may describe are the ones in this book: run radar and tower in the browser, build a) Tj
+T*
+(country airspace within minutes, create and preview the exercise, let artificial) Tj
+T*
+(intelligence pilot, replay a script instead of a video, speak and see the trainee in the) Tj
+T*
+(browser, and show a real flight envelope. Do not add a change that is not in this list.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The problem. Hardware and place. Many training rooms are tied to) Tj
+T*
+(a particular computer or a particular operating system. AiTC removes that tie. Because radar) Tj
+T*
+(and tower run in the browser, a session can start on the hardware already there, and the) Tj
+T*
+(same exercise can be opened from another location. Say that plainly. Do not say that every) Tj
+T*
+(existing simulator must be thrown away. Say that a session no longer depends on one kind of) Tj
+T*
+(machine.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The problem. The missing person at the other end. A traditional) Tj
+T*
+(exercise often needs a human pseudo-pilot to fly the aircraft while the student controls.) Tj
+T*
+(AiTC can pilot with artificial intelligence, using scripts written for that piloting. The) Tj
+T*
+(instructor can run the exercise without a second person at the other end. This is one of the) Tj
+T*
+(strongest reasons for an academy to try the platform. Say it when the reader trains with) Tj
+T*
+(limited staff.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The problem. Airspace that is slow to prepare. An air navigation) Tj
+T*
+(service cares that the training airspace is their airspace. In AiTC, airspace is created in) Tj
+T*
+(the platform. It can be drawn by hand, or created with the artificial intelligence, from a) Tj
+T*
+(file that comes from another simulator, from an aeronautical information publication, or) Tj
+T*
+(from another file that contains the airspace information. An entire country airspace can be) Tj
+T*
+(created within minutes. That sentence is for the air navigation service, not for every first) Tj
+T*
+(email.) Tj
 T*
 () Tj
 ET
@@ -290,20 +324,1590 @@ endobj
 9 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R >> >> >>
 endobj
+10 0 obj
+<< /Length 3279 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. The problem. The exercise that cannot be checked. An instructor) Tj
+T*
+(who cannot preview the exercise discovers the mistake during the lesson. In AiTC the) Tj
+T*
+(exercise is created in the platform and previewed in the exercise-creation module. The) Tj
+T*
+(creator tests the traffic picture and plans the exact exercise before a student sees it.) Tj
+T*
+(Pair this with the assistant: ask by voice or text for aircraft on a route, then move the) Tj
+T*
+(conflict and the peak by hand.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The problem. A debrief that is a heavy video. A video recording) Tj
+T*
+(of a session is large. AiTC records the session as a script and plays that script back from) Tj
+T*
+(the start. It is not a video recording and it is not an audio recording. The script) Tj
+T*
+(reproduces the exercise. A script recording is a hundred times smaller, and more, than a) Tj
+T*
+(video recording, so a large number of exercises can be stored. Say this when they ask how) Tj
+T*
+(sessions are reviewed or archived.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The problem. A remote student who cannot be seen. If the) Tj
+T*
+(instructor and the trainee are not in the same room, the instructor needs to see the) Tj
+T*
+(trainee. The AiTC voice system runs in the browser and includes video calling. During a) Tj
+T*
+(remote session the instructor can see the trainee. The same system simulates ground-to-air) Tj
+T*
+(and ground-to-ground lines between connected users. Use this for remote training. Do not) Tj
+T*
+(claim it replaces a national telephone network.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Positioning. The one sentence. AiTC is the AGI Aeronautics air) Tj
+T*
+(traffic control simulator that runs radar and tower in the browser, so an academy, a) Tj
+T*
+(university, or an air navigation service can run an exercise on the computers it already) Tj
+T*
+(has, in any location, without depending on one operating system. Use this sentence when you) Tj
+T*
+(need the whole product in one line. Then stop and add only the one capability that matches) Tj
+T*
+(the reader.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Positioning. What you are not claiming. You are not claiming that) Tj
+T*
+(AiTC is already the operational ATM system of the organisation. You are not claiming a) Tj
+T*
+(regulatory approval that this guide does not state. You are not claiming that their current) Tj
+T*
+(simulator vendor has failed. You are offering a training platform they can try. Keep the) Tj
+T*
+(operational system they use, if the directory records one, as their system. AiTC is the) Tj
+T*
+(training simulator you are asking them to trial.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Positioning. The category in the reader's mind. Place AiTC in the) Tj
+T*
+(category "air traffic control training simulator", and then add the difference: it runs in) Tj
+T*
+(the browser, the airspace can be built from their files within minutes, the exercise can be) Tj
+T*
+(previewed, and aircraft can be piloted by artificial intelligence. The category tells them) Tj
+T*
+(what job it does. The difference tells them why a trial is worth an hour. Do not invent a) Tj
+T*
+(second category, such as an operational control system.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+12 0 obj
+<< /Length 3719 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. Product lesson. Radar and tower in the browser. AiTC runs both) Tj
+T*
+(radar simulations and tower simulations directly in the browser. A class can train on the) Tj
+T*
+(radar picture and on the tower view without a separate installed simulator for each. How to) Tj
+T*
+(say it: "You can open a radar exercise and a tower exercise in the browser, on the computers) Tj
+T*
+(already in the room." Ask them which rating or lesson they teach first, aerodrome or) Tj
+T*
+(surveillance, and start the trial there.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Any hardware, any location. Because the) Tj
+T*
+(simulation is in the browser, an exercise can be run on the hardware the organisation) Tj
+T*
+(already owns. The same exercise can be started in another room or another city. How to say) Tj
+T*
+(it: "The session is not tied to one training workstation. If the person has a browser, they) Tj
+T*
+(can join from the place they are." This matters for a university computer lab and for an) Tj
+T*
+(instructor who is not on the same site as the student.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Operating system. AiTC does not depend on a) Tj
+T*
+(particular operating system. You do not ask the organisation to standardise its computers) Tj
+T*
+(before a trial. How to say it: "We do not ask you to change the operating system. The) Tj
+T*
+(simulation is delivered in the browser." If they ask for a supported version list, say you) Tj
+T*
+(will confirm the practical setup for the trial. Do not invent a version matrix in the email.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Airspace, two ways. Airspace is created inside) Tj
+T*
+(AiTC. One way is manual: the creator draws the airspace in the platform. The other way uses) Tj
+T*
+(artificial intelligence: the platform builds the airspace from a source file. How to say it:) Tj
+T*
+("You can draw the airspace yourself, or you can let the platform build it from a file you) Tj
+T*
+(already have." Offer both. Some readers want control. Some want speed. The trial can show) Tj
+T*
+(the way they prefer.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Which files can build airspace. The source file) Tj
+T*
+(can be a file from another simulator, an aeronautical information publication, or any other) Tj
+T*
+(file that contains the information needed to create the airspace. How to say it: "If you can) Tj
+T*
+(give us the file that already describes the airspace, we can use it. That includes an) Tj
+T*
+(aeronautical information publication." Ask them which file they trust. Do not promise that) Tj
+T*
+(every format has been tested unless you have done that test.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. A country airspace within minutes. An entire) Tj
+T*
+(country airspace can be created within minutes. How to say it to an air navigation service:) Tj
+T*
+("We can create your country airspace in the platform within minutes from the file you) Tj
+T*
+(provide." This is a product capability, not a promise that their validation is finished in) Tj
+T*
+(minutes. Creation is fast. Their review of the result still belongs to them. Say both) Tj
+T*
+(sentences so you do not oversell.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Exercises are created in the platform. The) Tj
+T*
+(instructor does not wait for a separate exercise bureau. The exercise is built inside AiTC.) Tj
+T*
+(How to say it: "Your instructor creates the exercise in the same platform the student will) Tj
+T*
+(use." Then explain the preview. Creation without preview would still leave the mistake for) Tj
+T*
+(the classroom. The next lesson is the preview.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 12 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+14 0 obj
+<< /Length 3523 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. Product lesson. Preview before the student sees it. The) Tj
+T*
+(exercise-creation module can preview the exercise. The creator runs it, watches the traffic,) Tj
+T*
+(and changes the plan before the training session. How to say it: "You can test the exercise) Tj
+T*
+(in the creation module and decide that this is the lesson you wanted." Ask what a good) Tj
+T*
+(exercise looks like for them: a conflict at a fix, a departure rush, a runway change. Then) Tj
+T*
+(build toward that picture in the trial.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. The exercise assistant. During creation, an) Tj
+T*
+(artificial intelligence assistant accepts voice commands and text commands. The creator can) Tj
+T*
+(ask for a certain number of aircraft on a specific route, or for particular aircraft types.) Tj
+T*
+(How to say it: "You can say, or type, that you want eight aircraft of a given type on that) Tj
+T*
+(route. The assistant sets that up. You remain in charge of the lesson." The assistant speeds) Tj
+T*
+(the first draft. It does not replace the instructor's judgement.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. The instructor still places the difficulty. After) Tj
+T*
+(the assistant creates the traffic, the creator adjusts by hand where the conflicts occur and) Tj
+T*
+(where the traffic peak is. How to say it: "The assistant gives you the traffic. You decide) Tj
+T*
+(where the conflict happens and where the peak sits." This sentence matters. Buyers fear that) Tj
+T*
+(artificial intelligence will produce a random exercise. You are selling control: speed from) Tj
+T*
+(the assistant, judgement from the instructor.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Traffic load by sector. For an exercise, AiTC) Tj
+T*
+(shows the traffic that flows through each sector. The creator sees the volume, the traffic) Tj
+T*
+(load, in those sectors. How to say it: "Before the lesson, you can see how heavy each sector) Tj
+T*
+(is, and you can change the exercise if one sector is not the one you meant to stress." This) Tj
+T*
+(is how a training manager checks that the exercise matches the objective. Use it in the) Tj
+T*
+(demonstration, not only in the brochure.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Scripts for the aircraft. Inside the) Tj
+T*
+(exercise-creation module, scripts make aircraft carry out actions by themselves. The) Tj
+T*
+(aircraft follow the script automatically. How to say it: "You can write a script so an) Tj
+T*
+(aircraft does a defined thing without someone steering it by hand for the whole exercise." A) Tj
+T*
+(script is for a planned action. Artificial intelligence piloting, in the next lesson, is for) Tj
+T*
+(flying the aircraft without a human pseudo-pilot. Explain them as a pair, then use only one) Tj
+T*
+(of them in the first email.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Artificial intelligence piloting. AiTC can use) Tj
+T*
+(scripts so artificial intelligence pilots the aircraft. A human does not need to sit at the) Tj
+T*
+(other end and control the planes. How to say it: "Your instructor can run the exercise) Tj
+T*
+(without a pseudo-pilot, because the aircraft are piloted by the artificial intelligence.") Tj
+T*
+(This is often the reason an academy agrees to a trial. Offer it when they have more students) Tj
+T*
+(than staff. Do not say the artificial intelligence replaces the instructor. The instructor) Tj
+T*
+(still designs and assesses.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 14 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+16 0 obj
+<< /Length 3537 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. Product lesson. Replay is a script, not a video. Training) Tj
+T*
+(sessions can be recorded and played back. The playback is not a video and it is not an audio) Tj
+T*
+(recording. It is a scripted recording that reproduces the exercise from the start, inside) Tj
+T*
+(the replay module. How to say it: "The debrief plays the exercise again from the beginning.) Tj
+T*
+(You are looking at the session as it is reproduced, not at a film of the screen." Students) Tj
+T*
+(and instructors can examine what happened. You may say they can see what happened in the) Tj
+T*
+(exercise. Do not add analytics this guide does not describe.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Why the recording is small. A script recording is) Tj
+T*
+(a hundred times smaller, and more, than a video recording of the same session. Because of) Tj
+T*
+(that, the organisation can store a large number of exercises. How to say it: "You can keep) Tj
+T*
+(many sessions, because the recording is the script of the exercise, and that script is) Tj
+T*
+(vastly smaller than a video." Use "a hundred times smaller, and more" as the comparison. Do) Tj
+T*
+(not convert it into a megabyte figure. This guide does not state a file size.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Voice in the browser. Voice communication runs in) Tj
+T*
+(the browser. Users in the same session can use simulated ground-to-air lines and) Tj
+T*
+(ground-to-ground lines. How to say it: "The student talks to the aircraft and to the other) Tj
+T*
+(ground positions inside the browser. You do not set up a separate voice system for the) Tj
+T*
+(trial." This supports a realistic exercise. It is a training simulation of those lines. Do) Tj
+T*
+(not describe it as the operational telephone system of a centre.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. Video so the instructor can see the trainee. The) Tj
+T*
+(voice system also supports video calling. In remote training, the instructor can see the) Tj
+T*
+(trainee throughout the session. How to say it: "If your instructor is not in the room, they) Tj
+T*
+(can still see the student while the exercise runs." This is the answer to remote training.) Tj
+T*
+(Pair it with the browser: both people join from the computers they have. The instructor sees) Tj
+T*
+(the trainee. The exercise still runs in AiTC.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. The aircraft is not a simple speed table. The) Tj
+T*
+(aircraft database is built on a detailed flight envelope for each aircraft. Speed and) Tj
+T*
+(altitude are not taken from a simple value table that guesses performance from altitude. The) Tj
+T*
+(aircraft in the simulation follows that flight-envelope model, as a representation of the) Tj
+T*
+(real aircraft based on the envelope. How to say it: "The aircraft behaves from its flight) Tj
+T*
+(envelope, not from a single speed written next to an altitude.") Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Product lesson. The student can see the envelope. The flight) Tj
+T*
+(envelope is visible inside the simulation. A student can open the graphic and see the) Tj
+T*
+(limitations of the aircraft. How to say it: "When a student needs to understand why the) Tj
+T*
+(aircraft cannot do what they asked, they can open the flight-envelope graphic in the) Tj
+T*
+(simulation and see the limit." This is a teaching tool, not only a physics detail. Use it) Tj
+T*
+(when the reader cares about aeronautical realism in the classroom.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 16 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+18 0 obj
+<< /Length 3695 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. Product lesson. How the capabilities fit in one session. A) Tj
+T*
+(complete training story is this. The airspace exists in the platform. The instructor creates) Tj
+T*
+(an exercise, previews it, and sets the conflict and the peak. Aircraft follow scripts or are) Tj
+T*
+(piloted by artificial intelligence. The student works radar or tower in the browser, speaks) Tj
+T*
+(on the simulated lines, and can be seen by video if the instructor is remote. The session is) Tj
+T*
+(replayed from the script. The student can open the flight envelope. You do not tell this) Tj
+T*
+(whole story in the first email. You tell it in the demonstration.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Message by reader. Air navigation service. Lead with their) Tj
+T*
+(airspace. Subject idea: AiTC trial for [organisation] airspace training. First paragraph:) Tj
+T*
+(AGI Aeronautics, and AiTC as a browser simulator for radar and tower. Second paragraph:) Tj
+T*
+(their country airspace can be created in the platform within minutes from a file they) Tj
+T*
+(already hold, such as an aeronautical information publication. Ask for a short conversation) Tj
+T*
+(about a trial on that airspace. Do not describe the flight envelope in this first note.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Message by reader. Training academy. Lead with the instructor's) Tj
+T*
+(missing counterpart. Subject idea: AiTC trial for [academy] air traffic control courses.) Tj
+T*
+(First paragraph: who you are, and that radar and tower run in the browser. Second paragraph:) Tj
+T*
+(exercises are created and previewed in the platform, and artificial intelligence can pilot) Tj
+T*
+(the aircraft so a human pseudo-pilot is not required. Ask for a trial on one lesson they) Tj
+T*
+(already teach. Do not open with price.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Message by reader. University. Lead with ordinary computers and a) Tj
+T*
+(lesson the student can inspect. Subject idea: AiTC for air traffic training at [university].) Tj
+T*
+(First paragraph: browser, no dependence on one operating system, usable in the lab they) Tj
+T*
+(already have. Second paragraph: students can preview the idea of the exercise with the) Tj
+T*
+(instructor, and they can open the flight-envelope graphic inside the simulation to see) Tj
+T*
+(aircraft limits. Ask for a trial with one class or one lecturer. Keep the) Tj
+T*
+(operational-airspace story for an air navigation service.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Message by reader. When the record is thin. Some organisations) Tj
+T*
+(have a website and a mailbox and little published detail on their simulator. Do not fill the) Tj
+T*
+(gap with a guess. Use the general sentence: radar and tower in the browser, on hardware they) Tj
+T*
+(already have. Offer a trial. Ask one question: whether they train aerodrome control,) Tj
+T*
+(surveillance, or both. Their answer chooses the demonstration. Silence on the simulator) Tj
+T*
+(vendor is not a problem to solve by invention.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The sales process. The stages. The stages are these. One: choose) Tj
+T*
+(the organisation on the map and read its record. Two: send one first email to the published) Tj
+T*
+(mailbox. Three: if there is no reply, send the follow-up sequence in this book and then) Tj
+T*
+(stop. Four: if they reply, answer the question they asked and offer the trial. Five: hold a) Tj
+T*
+(discovery conversation. Six: run the demonstration. Seven: if they want to continue, send a) Tj
+T*
+(proposal with the licence shape and the figure. Eight: record what happened in the) Tj
+T*
+(correspondence, so the next note matches the truth.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 18 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+20 0 obj
+<< /Length 3393 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. The sales process. One organisation, one thread. Do not start a) Tj
+T*
+(second first email to the same organisation while the first thread is open. Read the) Tj
+T*
+(correspondence under the pin before you write. If a message was sent and no reply has) Tj
+T*
+(arrived, you are in the silence sequence. If a reply has arrived, you answer that reply. If) Tj
+T*
+(nothing has been sent, the pin is still a first contact. The map colours help you see this.) Tj
+T*
+(Black means nothing sent. Blue means sent, with no reply. Green means a reply has been) Tj
+T*
+(received.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. First email. Who receives it. Send the first email to the) Tj
+T*
+(published institutional mailbox on the organisation record. Prefer the office, enquiry, or) Tj
+T*
+(training address. Do not replace it with a person's name you found elsewhere. If several) Tj
+T*
+(addresses are published, use the one the record lists first for correspondence, and you may) Tj
+T*
+(name the role of the others only if you are answering a question about who else is) Tj
+T*
+(published. One organisation receives one first email.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. First email. Subject. The subject names AiTC and the) Tj
+T*
+(organisation. Examples you may adapt: "AiTC trial for [organisation]", "Browser radar and) Tj
+T*
+(tower training for [academy]", "A short AiTC trial on [country] airspace". Do not use a) Tj
+T*
+(subject that pretends they requested a quote. Do not use urgency you have not earned, such) Tj
+T*
+(as "last chance" or "closing today". The subject should be understandable if it is forwarded) Tj
+T*
+(inside the organisation.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. First email. Shape. Four short parts. One: AGI Aeronautics, and) Tj
+T*
+(AiTC as a browser simulator for radar and tower. Two: one capability that matches this) Tj
+T*
+(reader, in two or three sentences, using the words from the product lessons. Three: the ask,) Tj
+T*
+(which is a short conversation about a trial. Four: the sign-off as AGI Aeronautics. The) Tj
+T*
+(mailbox signature is added when the message is sent from the outbox. You do not paste a) Tj
+T*
+(second signature into the draft.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. First email. Words you can send to an academy. "AGI Aeronautics) Tj
+T*
+(builds AiTC, an air traffic control simulator that runs radar and tower in the browser, on) Tj
+T*
+(the computers a school already has. An instructor can create the exercise in the platform,) Tj
+T*
+(preview it, and run it without a human pseudo-pilot, because the aircraft can be piloted by) Tj
+T*
+(artificial intelligence. If this is relevant to a course at [academy], I would like to offer) Tj
+T*
+(a short trial. Would you be open to a conversation?") Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. First email. Words you can send to an air navigation service.) Tj
+T*
+("AGI Aeronautics builds AiTC, a browser simulator for radar and tower training. Airspace can) Tj
+T*
+(be created in the platform from a file you already use, including an aeronautical) Tj
+T*
+(information publication, and a country airspace can be created within minutes. I am writing) Tj
+T*
+(to ask whether [organisation] would try this on a sample of your airspace. I am not assuming) Tj
+T*
+(a meeting is booked. If a trial is useful, tell me who should see it.") Tj
+T*
+() Tj
+ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 20 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+22 0 obj
+<< /Length 3615 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. First email. Words you can send to a university. "AGI Aeronautics) Tj
+T*
+(builds AiTC, an air traffic control simulator that runs in the browser and does not depend) Tj
+T*
+(on one operating system. Students can train on radar and tower on the computers already in a) Tj
+T*
+(lab. During a session they can also open the flight-envelope graphic and see the limits of) Tj
+T*
+(the aircraft. I would like to offer [university] a short trial for one lecturer or one) Tj
+T*
+(class. Are you the right person, or can you point me to them?") Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. First email. The ask, and only the ask. End with one request. The) Tj
+T*
+(request is a conversation about a trial, or the name of the person who owns air traffic) Tj
+T*
+(training. Do not also ask for a procurement form, a phone number, a list of their) Tj
+T*
+(simulators, and a signed trial agreement in the same email. One request is easier to answer.) Tj
+T*
+(If they reply with a question instead of a yes, that reply is a success. Answer it.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. First email. Length. The first email should be readable on a) Tj
+T*
+(phone in under a minute. If it is longer than about one hundred and fifty words, cut a) Tj
+T*
+(capability, not the ask. The book is long so that you know the product. The email is short) Tj
+T*
+(so that they read it. Anything you cut can return in the second message, after they have) Tj
+T*
+(shown interest.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Silence. What silence means. No reply is not a decision. It often) Tj
+T*
+(means the mailbox is shared, the reader is teaching, or the note was forwarded and stuck.) Tj
+T*
+(You still follow a sequence, and you still stop. Waiting is part of the method. Sending a) Tj
+T*
+(new version every day teaches them to ignore you. The sequence in this book is the whole) Tj
+T*
+(silence plan.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Silence. The timing. Wait several working days after the first) Tj
+T*
+(email. Then send follow-up one. Wait several more working days. Then send follow-up two.) Tj
+T*
+(Then stop. Do not send a third follow-up unless they later write to you. "Several working) Tj
+T*
+(days" means you leave enough time for a shared mailbox to be read. It does not mean you wait) Tj
+T*
+(so long that the first email is forgotten. If you need a number for your own calendar, use) Tj
+T*
+(five working days and then five again. Say that this spacing is your working rule, not a) Tj
+T*
+(reply they promised.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Silence. Follow-up one. Refer to the first email in one line.) Tj
+T*
+(Repeat the trial in fewer words. Add nothing new except one concrete detail that makes the) Tj
+T*
+(trial easier to imagine. For an academy, that detail can be "one lesson you already teach,) Tj
+T*
+(without a pseudo-pilot". For an air navigation service, it can be "a sample airspace from a) Tj
+T*
+(file you choose". Do not apologise for writing. Do not say they missed a deadline.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Silence. Words for follow-up one. "I wrote last week about a) Tj
+T*
+(short AiTC trial for [organisation]. AiTC runs radar and tower in the browser. The trial is) Tj
+T*
+(one exercise, on computers you already have. If someone else owns air traffic training, I am) Tj
+T*
+(glad to write to them instead. If the timing is wrong, tell me and I will close the note.") Tj
+T*
+(The last sentence gives them an easy reply that is not a yes. An easy reply is better than) Tj
+T*
+(silence, because then you know what to do.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 22 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+24 0 obj
+<< /Length 3774 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. Silence. Follow-up two. This is the last note in the sequence. It) Tj
+T*
+(is shorter than follow-up one. It says the offer remains a trial, and that you will not keep) Tj
+T*
+(writing unless they ask. How to say it: "This is my last note on an AiTC trial for) Tj
+T*
+([organisation]. If a browser-based radar and tower exercise would help a class or a course,) Tj
+T*
+(reply and I will set it up. If not, I will leave it here." Then stop. Stopping is part of) Tj
+T*
+(the professionalism you are selling.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Silence. What you must not invent during silence. Do not write) Tj
+T*
+(that they asked for a proposal. Do not write that a colleague promised a meeting. Do not) Tj
+T*
+(write that the offer expires on a date you chose alone, unless a real campaign date exists) Tj
+T*
+(and you are willing to honour it. Do not attach the whole sales book. Do not add a price to) Tj
+T*
+("make them answer". Silence is handled by clarity and by stopping, not by pressure.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. A reply. Answer the question they asked, first. The first) Tj
+T*
+(sentence of your reply answers their question. If they ask whether it runs on their) Tj
+T*
+(computers, answer the browser and the operating system. If they ask whether you need their) Tj
+T*
+(airspace, answer the file and the minutes. If they ask who flies the aircraft, answer) Tj
+T*
+(artificial intelligence piloting. Only after the answer do you return to the trial. People) Tj
+T*
+(reply when the next email continues their sentence, not when it restarts your brochure.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. A reply. If they ask about hardware. Say that AiTC runs in the) Tj
+T*
+(browser and does not depend on a particular operating system. Say that an exercise can be) Tj
+T*
+(run on the hardware already in the room and opened from another location. Offer the trial on) Tj
+T*
+(a computer they choose. Do not ask them to buy a workstation for the trial.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. A reply. If they ask about airspace. Say that airspace is created) Tj
+T*
+(in the platform, by hand or with artificial intelligence. Say the source can be a simulator) Tj
+T*
+(file, an aeronautical information publication, or another file that contains the airspace) Tj
+T*
+(information. Say a country airspace can be created within minutes. Ask which file they want) Tj
+T*
+(to use for the trial. Remind them that creation is fast and that they still review the) Tj
+T*
+(result.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. A reply. If they ask about staff. Say that scripts can make) Tj
+T*
+(aircraft act automatically, and that artificial intelligence can pilot so a human) Tj
+T*
+(pseudo-pilot is not required. Say the instructor still creates the exercise, previews it,) Tj
+T*
+(and places the conflict and the traffic peak. The product removes the second pilot. It does) Tj
+T*
+(not remove the instructor.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. A reply. If they ask about remote students. Say that voice runs) Tj
+T*
+(in the browser, with simulated ground-to-air and ground-to-ground lines, and that video) Tj
+T*
+(calling lets the instructor see the trainee during the session. Offer a trial in which you) Tj
+T*
+(and they are not in the same room, so they can judge this themselves.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. A reply. If they ask about realism. Say that the aircraft follows) Tj
+T*
+(a detailed flight envelope, not a simple table of speeds and altitudes. Say the student can) Tj
+T*
+(open that graphic inside the simulation and see the limitations. Offer to show one aircraft) Tj
+T*
+(in the trial. Do not invent a list of aircraft types beyond what you will actually open.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 24 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+26 0 obj
+<< /Length 3437 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. A reply. If they ask about recording. Say the replay is a script) Tj
+T*
+(that reproduces the exercise from the start. Say it is not a video and not an audio file.) Tj
+T*
+(Say a script is a hundred times smaller, and more, than a video, so many sessions can be) Tj
+T*
+(stored. Offer to record the trial itself and play it back, so the claim is demonstrated) Tj
+T*
+(rather than described.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. A reply. If they ask for a price. Do not invent a figure. Say) Tj
+T*
+(that AiTC is offered as a per-user licence or as an organisation licence. Say you will state) Tj
+T*
+(the figure in a proposal after you know who will use the platform and which shape fits them.) Tj
+T*
+(Ask the question that lets you choose the shape: how many people train at once, and is the) Tj
+T*
+(buyer the whole organisation or a single course. Then return to the trial. A price without a) Tj
+T*
+(trial is a guess they cannot judge.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. A reply. If they say no. Thank them in one or two sentences. Do) Tj
+T*
+(not argue. Do not send the silence sequence after a clear no. You may leave one door open:) Tj
+T*
+("If training plans change, I am glad to show a trial later." Then record the refusal in your) Tj
+T*
+(own notes and stop. A no that is respected is how you remain able to write again in a later) Tj
+T*
+(year.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. A reply. If they are not the right person. Ask for the name of) Tj
+T*
+(the person who owns air traffic control training, or for that person to be included. Do not) Tj
+T*
+(keep selling the product to someone who has told you they cannot decide. How to say it:) Tj
+T*
+("Thank you. Who is responsible for air traffic training at [organisation]? I will write one) Tj
+T*
+(note to them and I will say that you pointed me there." Then do exactly that. One) Tj
+T*
+(introduction, one new email.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Discovery. Why you ask questions before you demonstrate. A) Tj
+T*
+(demonstration that shows every module convinces nobody. A demonstration that shows their) Tj
+T*
+(lesson convinces the training manager. Discovery is the short conversation in which you) Tj
+T*
+(learn the lesson, the place, the staff, and the constraint. It can be the same meeting as) Tj
+T*
+(the demonstration if time is short. Ask the questions first, then open the browser.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Discovery. Questions that choose the trial. Ask which they teach,) Tj
+T*
+(radar or tower or both. Ask whether the student and the instructor are in the same room. Ask) Tj
+T*
+(whether a second person usually pilots the aircraft. Ask whether they want to use their own) Tj
+T*
+(airspace file or a sample. Ask what a successful lesson looks like: a conflict, a peak, a) Tj
+T*
+(runway, a sector. Ask who else must see the trial before a proposal. Write the answers down.) Tj
+T*
+(They become the demonstration plan and, later, the proposal.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Discovery. Questions you do not ask yet. Do not open discovery by) Tj
+T*
+(asking for their budget, their current vendor's price, or a criticism of their ATM system.) Tj
+T*
+(Do not ask for a student list. Do not ask them to admit that training is failing. Ask about) Tj
+T*
+(the lesson they want to run. The commercial questions wait until the trial has been useful.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+27 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 26 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+28 0 obj
+<< /Length 3388 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. The trial. What the trial is for. The trial answers one question) Tj
+T*
+(the buyer has. For an academy, the question is often "can we run a lesson without a) Tj
+T*
+(pseudo-pilot". For an air navigation service, it is often "can our airspace appear in the) Tj
+T*
+(platform". For a university, it is often "can students use it on the lab computers". Write) Tj
+T*
+(that question at the top of your plan. When the trial is over, ask whether that question was) Tj
+T*
+(answered. Do not add a second goal in the room.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The trial. What they need to bring. They need a browser and a) Tj
+T*
+(computer they already have. They do not need a particular operating system. They do not need) Tj
+T*
+(a human pseudo-pilot if the exercise uses artificial intelligence piloting. If the trial) Tj
+T*
+(uses their airspace, they bring a simulator file, an aeronautical information publication,) Tj
+T*
+(or another file that contains the airspace information. If they cannot bring a file, use a) Tj
+T*
+(sample and say that it is a sample.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The trial. What you prepare. Prepare one exercise, not five.) Tj
+T*
+(Preview it yourself in the exercise-creation module. Know where the conflict is and where) Tj
+T*
+(the traffic peak is. Know which sector should look busy if you show the traffic load. Decide) Tj
+T*
+(whether aircraft are scripted, piloted by artificial intelligence, or both, and be ready to) Tj
+T*
+(say which is which. If the instructor will be remote, test the video. If you will replay the) Tj
+T*
+(session, know how you will start the playback.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The trial. How long. Plan a trial that fits in one sitting. A) Tj
+T*
+(useful shape is a short introduction, the exercise, one replay, and time for their) Tj
+T*
+(questions. If you cannot show airspace creation and a full exercise and the flight envelope) Tj
+T*
+(and video in that sitting, choose the one that answers their question. Offer the others as a) Tj
+T*
+(second sitting. Completeness is the book's job. Focus is the trial's job.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The trial. How you open the hour. Start with their question, in) Tj
+T*
+(their words. "You wanted to see whether an instructor can run a tower lesson without a) Tj
+T*
+(second person flying the aircraft. That is what this hour is for." Then open the browser on) Tj
+T*
+(a computer in the room, or on theirs. The first proof is that it opened there. Say that.) Tj
+T*
+(Then run the exercise.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The demonstration. Order of events. Use this order when they have) Tj
+T*
+(asked for a full picture. One: open AiTC in the browser and say that this computer's) Tj
+T*
+(operating system is not a special requirement. Two: show radar, or tower, according to their) Tj
+T*
+(lesson. Three: show the airspace, and if they brought a file, say where it came from. Four:) Tj
+T*
+(show the exercise that was previewed, including the conflict and the peak. Five: show) Tj
+T*
+(aircraft moving by script or by artificial intelligence piloting. Six: use the voice lines,) Tj
+T*
+(and video if the instructor is remote. Seven: replay the session from the script. Eight:) Tj
+T*
+(open the flight-envelope graphic. Nine: stop and ask if their question was answered.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+29 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 28 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+30 0 obj
+<< /Length 3827 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. The demonstration. What you say at each step. At the browser:) Tj
+T*
+("This is the simulator. Nothing was installed for this machine." At radar or tower: "This is) Tj
+T*
+(the view your student would work." At airspace: "This airspace was created in the platform.) Tj
+T*
+(A country airspace can be created within minutes from a file like yours." At the exercise:) Tj
+T*
+("I previewed this before we started. The conflict is here. The peak is here. I can move) Tj
+T*
+(either." At piloting: "No one is sitting at another console to fly these aircraft." At) Tj
+T*
+(replay: "This is not a video. The exercise is being reproduced from the script." At the) Tj
+T*
+(envelope: "The student can open this and see the limit.") Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The demonstration. Let them touch it. A trial they only watch is) Tj
+T*
+(a presentation. Ask the instructor to request a change: more aircraft on a route, a) Tj
+T*
+(different type, the peak moved. Use the assistant by voice or by text, then adjust by hand.) Tj
+T*
+(Ask them to look at the traffic load of a sector. If they change the exercise and recognise) Tj
+T*
+(their own lesson, the trial has done its work. Do not rush past their hands back to your) Tj
+T*
+(script.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The demonstration. What you do not show. Do not show a price) Tj
+T*
+(slide in the middle of the exercise. Do not apologise for a capability you did not plan to) Tj
+T*
+(show. Do not claim a certification, a customer, or a performance number that is not in this) Tj
+T*
+(guide. If something in the trial does not work, say so and show the part that does. Honesty) Tj
+T*
+(in the room is worth more than a perfect story that breaks.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. They already have a simulator. Agree that they do.) Tj
+T*
+(Then separate training access from the machine they already own. "You can keep the training) Tj
+T*
+(programme you have. AiTC lets you run radar and tower in the browser, build airspace from a) Tj
+T*
+(file you already possess, and preview the exercise before the class. The trial is the way to) Tj
+T*
+(see whether that is useful beside what you use today." Do not attack the other system. You) Tj
+T*
+(may not know it. The directory records a vendor only when a public source named it.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. Information technology will not allow an) Tj
+T*
+(installation. Answer with the browser. AiTC does not ask them to roll out a new operating) Tj
+T*
+(system. The trial can happen on a computer their technical staff already accepts, because it) Tj
+T*
+(is a browser session. Offer to include that person in the trial. A technical objection is) Tj
+T*
+(often a request to be included, not a refusal of the training idea.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. We do not have pseudo-pilots. This is the artificial) Tj
+T*
+(intelligence piloting lesson. "The aircraft can be piloted by the artificial intelligence,) Tj
+T*
+(so the instructor can run the session without a person at the other end. Scripts can also) Tj
+T*
+(make aircraft perform planned actions automatically. You still design the exercise and you) Tj
+T*
+(still decide where the conflict and the peak are." Offer to run the trial with no) Tj
+T*
+(pseudo-pilot present.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. Our students are in another city. This is the remote) Tj
+T*
+(lesson. "Voice and video run in the browser. The instructor can see the trainee during the) Tj
+T*
+(session, and the simulated ground-to-air and ground-to-ground lines are in the same session.) Tj
+T*
+(The exercise is still radar or tower in the browser." Offer a trial in which you are the) Tj
+T*
+(remote instructor, so they see the video work.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+31 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 30 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+32 0 obj
+<< /Length 3378 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. Objections. Recordings will fill our storage. This is the replay) Tj
+T*
+(lesson. "The recording is a script that reproduces the exercise. It is not a video file. A) Tj
+T*
+(script recording is a hundred times smaller, and more, than a video, which is why many) Tj
+T*
+(sessions can be stored." Offer to record the trial and show the playback. Do not quote a) Tj
+T*
+(disk size.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. The aircraft will not be realistic enough. This is) Tj
+T*
+(the flight-envelope lesson. "Performance comes from a detailed flight envelope, not from a) Tj
+T*
+(simple table of speed against altitude. In the simulation the student can open the graphic) Tj
+T*
+(and see the aircraft limits." Show one aircraft. If they want a type you have not prepared,) Tj
+T*
+(say you will confirm it rather than pretending it is on screen.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. Artificial intelligence will write a bad exercise.) Tj
+T*
+(Separate the assistant from the instructor. "The assistant can take a voice or text request,) Tj
+T*
+(such as a number of aircraft on a route or a set of aircraft types. You then move the) Tj
+T*
+(conflict and the traffic peak yourself, and you can preview the whole exercise before a) Tj
+T*
+(student sees it. You can also read the traffic load in each sector." The assistant drafts.) Tj
+T*
+(The instructor decides.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. We need our whole country, not a sample. "An entire) Tj
+T*
+(country airspace can be created within minutes from a file that contains the airspace,) Tj
+T*
+(including an aeronautical information publication. The trial can use a portion so you can) Tj
+T*
+(judge the method, and the same method scales to the country. You still review the result.") Tj
+T*
+(Ask for the file. Do not promise their operational validation is complete when the creation) Tj
+T*
+(finishes.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. Send the documents and we will read them. Send the) Tj
+T*
+(one-sentence position and the trial offer. Do not send this whole book to a prospect. The) Tj
+T*
+(book is your private guidance. A long attachment is how a first email dies. If they insist) Tj
+T*
+(on something to forward, give them a short note in the email itself: browser, radar and) Tj
+T*
+(tower, the one capability they asked about, and the invitation to a trial.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. Call us next year. Accept the timing. Ask for the) Tj
+T*
+(month when training plans are made. Write one sentence in your notes. Send one note when) Tj
+T*
+(that month arrives, referring to this reply. Do not keep the silence sequence running) Tj
+T*
+(through the year. A dated yes-later is a reply, not silence. Treat it with the respect you) Tj
+T*
+(give a no: one plan, then quiet.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Objections. We need a formal tender. Agree. Ask what the tender) Tj
+T*
+(must contain, and who receives it. Build the proposal from this book: what AiTC does, how a) Tj
+T*
+(trial would work, and the licence shape. Put the figure in only when you are ready to stand) Tj
+T*
+(behind it. Do not invent compliance claims to fit a form. If a form asks for a fact this) Tj
+T*
+(guide does not contain, leave it for a direct answer rather than a guess.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+33 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 32 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+34 0 obj
+<< /Length 3263 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. Price. When to talk about price. Talk about price after the) Tj
+T*
+(problem is clear and after a trial, or when they ask. If they ask early, answer the shape) Tj
+T*
+(and defer the figure, as the reply lesson says. If you announce a number in the first email,) Tj
+T*
+(the conversation becomes a discount discussion before they have seen radar, tower, or their) Tj
+T*
+(airspace. The trial gives the number a meaning: this many people, this organisation, this) Tj
+T*
+(use.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Price. The per-user licence. A per-user licence is a price for) Tj
+T*
+(each person who uses AiTC. Offer this shape when the buyer is a course, a small class, or a) Tj
+T*
+(team whose size they can name. Explain that the proposal will say who counts as a user. Do) Tj
+T*
+(not decide, in the email, that a spectator or an administrator is free or billable. That) Tj
+T*
+(definition belongs in the proposal you actually send.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Price. The organisation licence. An organisation licence is one) Tj
+T*
+(agreement for the academy, the university, or the air navigation service. Offer this shape) Tj
+T*
+(when many instructors and students will use AiTC, or when the buyer wants one decision for) Tj
+T*
+(the whole school rather than a count of seats. Say that the proposal names the organisation) Tj
+T*
+(and the figure. Do not describe it as unlimited if the proposal will contain a limit. This) Tj
+T*
+(guide does not set that limit.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Price. How you choose the shape. Ask who will use AiTC in the) Tj
+T*
+(next training period: one class, several courses, or the whole training organisation. A) Tj
+T*
+(single course points toward a per-user licence. A whole academy or a whole air navigation) Tj
+T*
+(training department points toward an organisation licence. You may offer both and recommend) Tj
+T*
+(one. Say why in one sentence, using their answer. Then put only the recommended figure, or) Tj
+T*
+(both figures, in the proposal. Do not put either figure in this guide.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Price. What you never do with a number. You do not invent a price) Tj
+T*
+(to seem concrete. You do not copy a contract price from another company, or from a) Tj
+T*
+(network-wide simulator purchase, and present it as the AiTC price. You do not offer a) Tj
+T*
+(discount against a number you have not stated. You do not tell one organisation the figure) Tj
+T*
+(you offered another. If a public source states someone else's contract, that figure stays in) Tj
+T*
+(their record as their published contract. It is not your licence fee.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The proposal. What it contains. A proposal after a successful) Tj
+T*
+(trial contains these parts. The organisation and the lesson you trialled. The AiTC) Tj
+T*
+(capabilities they actually saw. The licence shape you recommend, and why. The figure. What) Tj
+T*
+(they need to start: a browser, their computers, and, if they want their airspace, the file.) Tj
+T*
+(What happens next, which is a date to begin or a date to decide. It does not contain claims) Tj
+T*
+(from this book that you did not show and cannot support.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+35 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 34 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+36 0 obj
+<< /Length 3605 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. The proposal. How you describe the product there. Use the same) Tj
+T*
+(words as the product lessons. Radar and tower in the browser. Hardware-agnostic, not tied to) Tj
+T*
+(one operating system. Airspace by hand or by artificial intelligence, from their file, with) Tj
+T*
+(a country airspace possible within minutes. Exercises created and previewed in the platform.) Tj
+T*
+(Assistant by voice or text, then manual placement of the conflict and the peak. Traffic load) Tj
+T*
+(by sector. Scripts. Artificial intelligence piloting. Script replay, a hundred times smaller) Tj
+T*
+(than video, and more. Voice, ground-to-air and ground-to-ground, and video for the remote) Tj
+T*
+(instructor. Flight envelope, visible to the student. Cut any sentence they did not care) Tj
+T*
+(about.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. After the decision. If they want to proceed. Confirm the licence) Tj
+T*
+(shape, the figure, and the start in writing. Repeat what the trial showed, so the agreement) Tj
+T*
+(matches the demonstration. Ask for the airspace file if the work depends on it. Introduce) Tj
+T*
+(only the next practical step. Do not reopen the entire product. The sale moved from) Tj
+T*
+(attention to delivery.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. After the decision. If they need time. Ask what the decision) Tj
+T*
+(needs: another viewer, a tender date, or a budget meeting. Put that date in your notes. One) Tj
+T*
+(follow-up at that date is enough, and it refers to the trial they already saw. Do not) Tj
+T*
+(restart with the first-email text. They have already met the product.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. After the decision. If the trial failed their question. Ask which) Tj
+T*
+(part failed. If it was a capability AiTC has, offer a second sitting that shows that part.) Tj
+T*
+(If it was a requirement this guide does not claim, say you cannot meet it and stop. Do not) Tj
+T*
+(promise a feature in order to save the meeting. The product you sell is the product in these) Tj
+T*
+(lessons.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The map. How the guide and the map work together. The) Tj
+T*
+(organisation directory tells you the published mailbox, the city, and any published ATM) Tj
+T*
+(system or simulator note. The map tells you whether you have written, and whether they have) Tj
+T*
+(replied. This book tells you what to write. Before you draft, read all three. A beautiful) Tj
+T*
+(email to the wrong address, or a first email to someone who already replied, wastes the) Tj
+T*
+(method.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. The map. What you record. When you send, the correspondence) Tj
+T*
+(stores the subject and the message. When they reply, open the message and read it before you) Tj
+T*
+(draft again. The pin stays green after you have read the reply, so a read reply is not) Tj
+T*
+(mistaken for silence. Your next email should mention the thing they said. That is the) Tj
+T*
+(marketing principle of relevance, applied to one organisation at a time.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Practice. Rewrite a feature as a buyer's sentence. Take any) Tj
+T*
+(product lesson in this book and write one sentence a training manager would care about.) Tj
+T*
+(Example for replay: "You can debrief the lesson by reproducing the exercise, and you can) Tj
+T*
+(keep many of those lessons because the recording is a script, not a video." Do this for) Tj
+T*
+(airspace, for artificial intelligence piloting, and for the flight envelope. If the sentence) Tj
+T*
+(contains a number you invented, delete it.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+37 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 36 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+38 0 obj
+<< /Length 3463 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. Practice. Choose the first email. Pick one organisation from the) Tj
+T*
+(directory. Decide if it is an air navigation service, an academy, or a university. Choose) Tj
+T*
+(one capability. Write the four-part email from the first-email lesson. Read it aloud. Cut) Tj
+T*
+(until it takes under a minute. Check the map colour before you send. Black can receive a) Tj
+T*
+(first email. Blue is already in the silence sequence. Green means you answer the reply you) Tj
+T*
+(have.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Practice. Plan a trial from a reply. Imagine they reply, "Can our) Tj
+T*
+(instructors run this without extra staff, on the PCs in the classroom?" Your plan: browser) Tj
+T*
+(on their PC, one tower or radar lesson, artificial intelligence piloting, no pseudo-pilot in) Tj
+T*
+(the room, preview of the conflict, and a question at the end: "Did this run without the) Tj
+T*
+(extra person?" Write that plan in five lines. That is the demonstration discipline.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Practice. Explain the price without a number. Say the two shapes.) Tj
+T*
+(Say which one you would recommend for a twelve-person course, and which one you would) Tj
+T*
+(recommend for a whole academy. Do not say a currency amount. End with: "The figure goes in) Tj
+T*
+(the proposal after we agree the shape." If you can do that aloud, you are ready for the) Tj
+T*
+(price question.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Words you may use. You may say that AGI Aeronautics offers AiTC.) Tj
+T*
+(You may say radar and tower run in the browser, on existing hardware, in any location,) Tj
+T*
+(without dependence on one operating system. You may say airspace is created manually or with) Tj
+T*
+(artificial intelligence from a simulator file, an aeronautical information publication, or) Tj
+T*
+(another file that contains the airspace information, and that a country airspace can be) Tj
+T*
+(created within minutes. You may say exercises are created and previewed in the platform.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Words you may use. The rest of the product. You may say the) Tj
+T*
+(assistant takes voice or text requests for a number of aircraft, a route, or aircraft types,) Tj
+T*
+(and that the creator then places the conflict and the traffic peak. You may say traffic load) Tj
+T*
+(is visible per sector. You may say scripts drive aircraft automatically, and that artificial) Tj
+T*
+(intelligence can pilot so a human pseudo-pilot is not required. You may say replay is a) Tj
+T*
+(script, not video or audio, a hundred times smaller than video and more. You may say voice) Tj
+T*
+(includes ground-to-air and ground-to-ground, and video lets a remote instructor see the) Tj
+T*
+(trainee. You may say the flight envelope is detailed, graphical, and visible to the student) Tj
+T*
+(inside the simulation.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC sales guide. Words you may not use. Do not state a price that is not in the) Tj
+T*
+(proposal you are sending. Do not state a customer, a percentage, a time saving, or a) Tj
+T*
+(certification that this book does not contain. Do not say a meeting is booked. Do not say) Tj
+T*
+(they asked for a quote. Do not assign them an ATM system or a simulator vendor that their) Tj
+T*
+(record does not publish. Do not say you have already written to them if the correspondence) Tj
+T*
+(is empty. Do not say a personal mailbox is the institutional contact.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+39 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 38 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+40 0 obj
+<< /Length 490 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC sales guide. Closing. How you know you are ready. You are ready to sell AiTC) Tj
+T*
+(when you can do four things without the book open. Say the one-sentence position. Choose one) Tj
+T*
+(capability for one kind of buyer. Ask for a trial and stop. Explain per-user and) Tj
+T*
+(organisation licences without inventing a figure. The rest of this book is there when they) Tj
+T*
+(ask a harder question. Use it. Then write a short email.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+41 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 40 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
 xref
-0 10
+0 42
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000127 00000 n 
-0000000197 00000 n 
-0000003705 00000 n 
-0000003831 00000 n 
-0000007205 00000 n 
-0000007331 00000 n 
-0000009809 00000 n 
+0000000240 00000 n 
+0000000310 00000 n 
+0000003757 00000 n 
+0000003883 00000 n 
+0000007715 00000 n 
+0000007841 00000 n 
+0000011675 00000 n 
+0000011801 00000 n 
+0000015133 00000 n 
+0000015261 00000 n 
+0000019033 00000 n 
+0000019161 00000 n 
+0000022737 00000 n 
+0000022865 00000 n 
+0000026455 00000 n 
+0000026583 00000 n 
+0000030331 00000 n 
+0000030459 00000 n 
+0000033905 00000 n 
+0000034033 00000 n 
+0000037701 00000 n 
+0000037829 00000 n 
+0000041656 00000 n 
+0000041784 00000 n 
+0000045274 00000 n 
+0000045402 00000 n 
+0000048843 00000 n 
+0000048971 00000 n 
+0000052851 00000 n 
+0000052979 00000 n 
+0000056410 00000 n 
+0000056538 00000 n 
+0000059854 00000 n 
+0000059982 00000 n 
+0000063640 00000 n 
+0000063768 00000 n 
+0000067284 00000 n 
+0000067412 00000 n 
+0000067954 00000 n 
 trailer
-<< /Size 10 /Root 1 0 R >>
+<< /Size 42 /Root 1 0 R >>
 startxref
-9935
+68082
 %%EOF
