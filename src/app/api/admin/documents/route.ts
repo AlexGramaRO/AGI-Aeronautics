@@ -30,6 +30,7 @@ export async function GET() {
       mimeType: true,
       charCount: true,
       chunkCount: true,
+      audience: true,
       createdAt: true,
       uploadedBy: { select: { name: true, email: true } },
     },
@@ -44,9 +45,21 @@ export async function POST(request: NextRequest) {
 
   const formData = await request.formData().catch(() => null);
   const file = formData?.get("file");
+  const requestedAudience = String(formData?.get("audience") || "PUBLIC");
+  const audience = requestedAudience === "ADMIN" ? "ADMIN" : "PUBLIC";
 
   if (!file || !(file instanceof File)) {
     return NextResponse.json({ error: "No file provided." }, { status: 400 });
+  }
+
+  if (formData?.get("replace") === "1") {
+    const existing = await prisma.document.findMany({
+      where: { filename: file.name, audience },
+      select: { id: true },
+    });
+    for (const doc of existing) {
+      await prisma.document.delete({ where: { id: doc.id } });
+    }
   }
 
   const arrayBuffer = await file.arrayBuffer();
@@ -89,6 +102,7 @@ export async function POST(request: NextRequest) {
       mimeType: file.type || "text/plain",
       charCount: text.length,
       chunkCount: chunks.length,
+      audience,
       uploadedById: admin.sub,
       chunks: {
         create: chunks.map((chunk, i) => ({
@@ -103,6 +117,7 @@ export async function POST(request: NextRequest) {
       filename: true,
       chunkCount: true,
       charCount: true,
+      audience: true,
       createdAt: true,
     },
   });

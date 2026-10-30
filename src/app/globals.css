@@ -103,18 +103,21 @@ body {
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9);
 }
 
-.outreach-pin.is-selected {
+.outreach-pin.is-sent {
   background: #0071e3;
-  box-shadow: 0 0 0 6px rgba(0, 113, 227, 0.25);
+}
+
+.outreach-pin.is-reply {
+  background: #248a3d;
+}
+
+.outreach-pin.is-selected {
+  box-shadow: 0 0 0 6px rgba(0, 113, 227, 0.28);
 }
 
 .outreach-pin.is-test {
-  background: #d70015;
-}
-
-.outreach-pin.is-test.is-selected {
-  background: #d70015;
-  box-shadow: 0 0 0 6px rgba(215, 0, 21, 0.28);
+  outline: 3px solid #d70015;
+  outline-offset: 2px;
 }
 
 .outreach-badge {

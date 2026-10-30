@@ -22,6 +22,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     { href: "/admin/outreach/inbox", label: "Inbox" },
     { href: "/admin/outreach/settings", label: "Mail" },
     { href: "/admin/knowledge", label: "Knowledge" },
+    { href: "/admin/assistant", label: "Assistant" },
     { href: "/admin/inquiries", label: "Inquiries" },
     ...(record?.role === "SUPERADMIN" ? [{ href: "/admin/users", label: "People" }] : []),
   ];

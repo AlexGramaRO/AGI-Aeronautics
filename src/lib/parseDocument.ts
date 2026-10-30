@@ -8,7 +8,7 @@ export async function extractText(
   if (mimeType === "application/pdf" || lower.endsWith(".pdf")) {
     const pdfParse = (await import("pdf-parse")).default;
     const result = await pdfParse(buffer);
-    return result.text;
+    return result.text.replace(/\n(?=(ORGANISATION:|SECTION:))/g, "\n\n");
   }
 
   if (

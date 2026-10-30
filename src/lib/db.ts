@@ -35,6 +35,7 @@ async function loadCloudflarePrisma(): Promise<CfClient> {
     );
   }
   await env.DB.exec(D1_SCHEMA_SQL);
+  await env.DB.exec(`ALTER TABLE "Document" ADD COLUMN "audience" TEXT NOT NULL DEFAULT 'PUBLIC'`).catch(() => null);
   const adapter = new PrismaD1(env.DB as ConstructorParameters<typeof PrismaD1>[0]);
   const client = new generated.PrismaClient({ adapter, log: ["error"] });
   await seedD1(client as unknown as Parameters<typeof seedD1>[0]);

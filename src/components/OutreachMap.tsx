@@ -22,6 +22,7 @@ type Org = {
   simulatorPrice: string | null;
   notes: string | null;
   contacts: Contact[];
+  sentCount: number;
   unreadCount: number;
   receivedCount: number;
 };
@@ -60,6 +61,14 @@ function clusterOrgs(orgs: Org[]): Cluster[] {
   }));
 }
 
+type MailFilter = "all" | "black" | "blue" | "green";
+
+function mailStatus(org: Org): Exclude<MailFilter, "all"> {
+  if (org.receivedCount > 0) return "green";
+  if (org.sentCount > 0) return "blue";
+  return "black";
+}
+
 function field(label: string, value: string | null | undefined) {
   return (
     <p className="mt-2 text-[14px] text-ink">
@@ -86,14 +95,19 @@ export default function OutreachMap() {
   const [selected, setSelected] = useState<string[]>([]);
   const [menu, setMenu] = useState<{ x: number; y: number } | null>(null);
   const [active, setActive] = useState<Cluster | null>(null);
-  const [tab, setTab] = useState<"details" | "correspondence">("details");
+  const [filter, setFilter] = useState<MailFilter>("all");
   const [mail, setMail] = useState<Mail[]>([]);
+  const [openMail, setOpenMail] = useState<string[]>([]);
   const [noteOpen, setNoteOpen] = useState(false);
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
 
-  const clusters = useMemo(() => clusterOrgs(orgs), [orgs]);
+  const visibleOrgs = useMemo(
+    () => (filter === "all" ? orgs : orgs.filter((org) => mailStatus(org) === filter)),
+    [orgs, filter]
+  );
+  const clusters = useMemo(() => clusterOrgs(visibleOrgs), [visibleOrgs]);
   const selectedSet = useMemo(() => new Set(selected), [selected]);
 
   useEffect(() => {
@@ -106,6 +120,7 @@ export default function OutreachMap() {
   useEffect(() => {
     if (!active) return;
     const ids = active.orgs.map((org) => org.id).join(",");
+    setOpenMail([]);
     fetch(`/api/admin/outreach/messages?organizationIds=${ids}`)
       .then((res) => res.json())
       .then((data) => setMail(data.messages || []));
@@ -214,6 +229,12 @@ export default function OutreachMap() {
       for (const cluster of clusters) {
         const unread = cluster.orgs.reduce((sum, org) => sum + org.unreadCount, 0);
         const received = cluster.orgs.reduce((sum, org) => sum + org.receivedCount, 0);
+        const sent = cluster.orgs.reduce((sum, org) => sum + (org.sentCount || 0), 0);
+        const status = cluster.orgs.some((org) => mailStatus(org) === "green")
+          ? "is-reply"
+          : cluster.orgs.some((org) => mailStatus(org) === "blue")
+            ? "is-sent"
+            : "";
         const on = cluster.orgs.some((org) => selectedSet.has(org.id));
         const testPin = cluster.orgs.some((org) =>
           org.contacts.some((contact) => contact.email?.toLowerCase() === "alex.grama@icloud.com")
@@ -223,7 +244,7 @@ export default function OutreachMap() {
           className: "",
           iconSize: [22, 22],
           iconAnchor: [11, 11],
-          html: `<div class="outreach-pin${testPin ? " is-test" : ""}${on ? " is-selected" : ""}" title="${received} received, ${unread} unread">${
+          html: `<div class="outreach-pin${status ? ` ${status}` : ""}${testPin ? " is-test" : ""}${on ? " is-selected" : ""}" title="${sent} sent, ${received} received, ${unread} unread">${
             badge ? `<span class="outreach-badge${unread ? "" : " is-read"}">${unread || received}</span>` : ""
           }</div>`,
         });
@@ -237,7 +258,6 @@ export default function OutreachMap() {
             });
             return;
           }
-          setTab("details");
           setActive(cluster);
         });
         marker.addTo(layer);
@@ -293,8 +313,43 @@ export default function OutreachMap() {
     );
   }
 
+  function toggleMail(message: Mail) {
+    if (openMail.includes(message.id)) {
+      setOpenMail((current) => current.filter((id) => id !== message.id));
+      return;
+    }
+    setOpenMail((current) => [...current, message.id]);
+    markRead(message);
+  }
+
+  const filters: { id: MailFilter; label: string }[] = [
+    { id: "all", label: "All" },
+    { id: "black", label: "Black" },
+    { id: "blue", label: "Blue" },
+    { id: "green", label: "Green" },
+  ];
+
   return (
     <div>
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        {filters.map((item) => (
+          <button
+            key={item.id}
+            className={`rounded-full px-4 py-1.5 text-[13px] ${
+              filter === item.id ? "bg-ink text-white" : "bg-canvas text-ink"
+            }`}
+            onClick={() => {
+              setFilter(item.id);
+              setActive(null);
+            }}
+          >
+            {item.label}
+          </button>
+        ))}
+        <p className="text-[13px] text-muted">
+          Black means no email sent. Blue means sent, with no reply. Green means a reply was received.
+        </p>
+      </div>
       <div
         className="relative overflow-hidden rounded-3xl border border-black/10"
         onContextMenu={(event) => {
@@ -358,78 +413,68 @@ export default function OutreachMap() {
       {active && (
         <div className="mt-4 rounded-3xl bg-canvas p-5">
           <div className="flex items-start justify-between gap-4">
-            <div className="flex gap-4 text-[15px]">
-              <button className={tab === "details" ? "text-ink" : "text-muted"} onClick={() => setTab("details")}>
-                Details
-              </button>
-              <button
-                className={tab === "correspondence" ? "text-ink" : "text-muted"}
-                onClick={() => setTab("correspondence")}
-              >
-                Correspondence
-              </button>
-            </div>
+            <h2 className="text-[21px] font-semibold tracking-tight text-ink">Location</h2>
             <button className="text-[13px] text-muted" onClick={() => setActive(null)}>
               Close
             </button>
           </div>
-
-          {tab === "details" ? (
-            <div className="mt-4 space-y-6">
-              {active.orgs.map((org) => (
-                <article key={org.id}>
-                  <h3 className="text-[21px] font-semibold tracking-tight text-ink">{org.name}</h3>
-                  <p className="text-[14px] text-muted">
-                    {KIND[org.kind] || org.kind} · {org.city}, {org.country}
+          <div className="mt-4 space-y-6">
+            {active.orgs.map((org) => (
+              <article key={org.id}>
+                <h3 className="text-[21px] font-semibold tracking-tight text-ink">{org.name}</h3>
+                <p className="text-[14px] text-muted">
+                  {KIND[org.kind] || org.kind} · {org.city}, {org.country}
+                </p>
+                {field("ATM system", org.atmSystem)}
+                {field("Simulator", org.simulatorKind === "UNKNOWN" ? null : org.simulatorKind.replace(/_/g, " "))}
+                {field("Simulator vendor", org.simulatorVendor)}
+                {field("Acquired", org.simulatorAcquired)}
+                {field("Price", org.simulatorPrice)}
+                {org.website && (
+                  <p className="mt-2 text-[14px]">
+                    <a className="text-[#0066cc]" href={org.website} target="_blank" rel="noreferrer">
+                      {org.website}
+                    </a>
                   </p>
-                  {field("ATM system", org.atmSystem)}
-                  {field("Simulator", org.simulatorKind === "UNKNOWN" ? null : org.simulatorKind.replace(/_/g, " "))}
-                  {field("Simulator vendor", org.simulatorVendor)}
-                  {field("Acquired", org.simulatorAcquired)}
-                  {field("Price", org.simulatorPrice)}
-                  {org.website && (
-                    <p className="mt-2 text-[14px]">
-                      <a className="text-[#0066cc]" href={org.website} target="_blank" rel="noreferrer">
-                        {org.website}
-                      </a>
+                )}
+                <div className="mt-3">
+                  {org.contacts.length === 0 && <p className="text-[14px] text-muted">No published contact email.</p>}
+                  {org.contacts.map((contact) => (
+                    <p key={contact.id} className="text-[14px] text-ink">
+                      {contact.name || contact.title || "Contact"}
+                      {contact.email ? ` · ${contact.email}` : ""}
                     </p>
-                  )}
-                  <div className="mt-3">
-                    {org.contacts.length === 0 && <p className="text-[14px] text-muted">No published contact email.</p>}
-                    {org.contacts.map((contact) => (
-                      <p key={contact.id} className="text-[14px] text-ink">
-                        {contact.name || contact.title || "Contact"}
-                        {contact.email ? ` · ${contact.email}` : ""}
-                      </p>
-                    ))}
-                  </div>
-                  {org.notes && <p className="mt-2 text-[13px] leading-relaxed text-muted">{org.notes}</p>}
-                </article>
-              ))}
-            </div>
-          ) : (
-            <div className="mt-4 space-y-4">
-              {mail.length === 0 && <p className="text-[15px] text-muted">No correspondence yet.</p>}
-              {mail.map((message) => (
-                <button
-                  key={message.id}
-                  className="block w-full rounded-2xl bg-white p-4 text-left"
-                  onClick={() => markRead(message)}
-                >
-                  <p className="text-[13px] text-muted">
-                    {message.unread ? "Unread · " : ""}
-                    {message.direction === "INBOUND" ? "Received" : "Sent"} ·{" "}
-                    {new Date(message.occurredAt).toLocaleString()}
-                  </p>
-                  <p className="mt-1 font-medium text-ink">{message.subject}</p>
-                  <p className="mt-1 text-[13px] text-muted">
-                    {message.fromEmail} → {message.toEmail}
-                  </p>
-                  <p className="mt-2 whitespace-pre-wrap text-[14px] text-ink">{message.body}</p>
-                </button>
-              ))}
-            </div>
-          )}
+                  ))}
+                </div>
+                {org.notes && <p className="mt-2 text-[13px] leading-relaxed text-muted">{org.notes}</p>}
+              </article>
+            ))}
+          </div>
+
+          <h2 className="mt-8 text-[21px] font-semibold tracking-tight text-ink">Correspondence</h2>
+          <div className="mt-4 space-y-2">
+            {mail.length === 0 && <p className="text-[15px] text-muted">No correspondence yet.</p>}
+            {mail.map((message) => {
+              const open = openMail.includes(message.id);
+              return (
+                <div key={message.id} className="rounded-2xl bg-white">
+                  <button className="block w-full p-4 text-left" onClick={() => toggleMail(message)}>
+                    <p className="text-[13px] text-muted">
+                      {message.unread ? "Unread · " : ""}
+                      {message.direction === "INBOUND" ? "Received" : "Sent"} ·{" "}
+                      {new Date(message.occurredAt).toLocaleString()}
+                    </p>
+                    <p className="mt-1 font-medium text-ink">{message.subject}</p>
+                    <p className="mt-1 text-[13px] text-muted">
+                      {message.fromEmail} → {message.toEmail}
+                      {open ? " · Hide message" : " · Show message"}
+                    </p>
+                  </button>
+                  {open && <p className="whitespace-pre-wrap px-4 pb-4 text-[14px] text-ink">{message.body}</p>}
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
 

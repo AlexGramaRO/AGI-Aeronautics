@@ -50,6 +50,11 @@ enum InquiryStatus {
   ARCHIVED
 }
 
+enum KnowledgeAudience {
+  PUBLIC
+  ADMIN
+}
+
 model User {
   id           String   @id @default(cuid())
   name         String
@@ -64,14 +69,15 @@ model User {
 }
 
 model Document {
-  id           String   @id @default(cuid())
+  id           String            @id @default(cuid())
   filename     String
   mimeType     String
   charCount    Int
   chunkCount   Int
-  uploadedBy   User?    @relation(fields: [uploadedById], references: [id], onDelete: SetNull)
+  audience     KnowledgeAudience @default(PUBLIC)
+  uploadedBy   User?             @relation(fields: [uploadedById], references: [id], onDelete: SetNull)
   uploadedById String?
-  createdAt    DateTime @default(now())
+  createdAt    DateTime          @default(now())
 
   chunks KnowledgeChunk[]
 }

@@ -13,8 +13,7 @@ export async function GET() {
     include: {
       contacts: true,
       messages: {
-        where: { direction: "INBOUND" },
-        select: { unread: true },
+        select: { direction: true, unread: true },
       },
     },
     orderBy: { name: "asc" },
@@ -23,8 +22,9 @@ export async function GET() {
   return NextResponse.json({
     organizations: organizations.map((org) => ({
       ...org,
-      receivedCount: org.messages.length,
-      unreadCount: org.messages.filter((message) => message.unread).length,
+      sentCount: org.messages.filter((message) => message.direction === "OUTBOUND").length,
+      receivedCount: org.messages.filter((message) => message.direction === "INBOUND").length,
+      unreadCount: org.messages.filter((message) => message.direction === "INBOUND" && message.unread).length,
       messages: undefined,
     })),
   });

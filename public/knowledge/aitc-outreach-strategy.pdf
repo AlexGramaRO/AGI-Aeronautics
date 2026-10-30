@@ -1,0 +1,309 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 3 /Kids [5 0 R 7 0 R 9 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 3456 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC contact strategy. What this document is. This is the AGI Aeronautics marketing) Tj
+T*
+(and first-contact strategy for AiTC. It describes the product, how to write the first email,) Tj
+T*
+(how to follow up when there is no reply, how to follow up when there is a reply, how to ask) Tj
+T*
+(for a trial, and how the licence is structured. AGI Aeronautics confirms any price in a) Tj
+T*
+(written proposal. This document does not set a public price.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. Browser radar and tower. AiTC runs both radar simulations and tower) Tj
+T*
+(simulations directly in the browser. A training session can start on the hardware that is) Tj
+T*
+(already in the room. The same exercise can be opened from another location without) Tj
+T*
+(installing a separate simulator application for that operating system.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. Hardware and operating system. AiTC is hardware-agnostic. It does not) Tj
+T*
+(depend on one operating system. An academy, a university, or an air navigation service can) Tj
+T*
+(run an exercise on the computers it already has, because the simulation is delivered in the) Tj
+T*
+(browser.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. Airspace creation. Airspace is created inside AiTC. It can be drawn) Tj
+T*
+(manually, or it can be created with the artificial intelligence in the platform. The source) Tj
+T*
+(can be a file from another simulator, an aeronautical information publication, or another) Tj
+T*
+(file that contains the airspace information. An entire country airspace can be created) Tj
+T*
+(within minutes.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. Exercise creation and preview. Exercises are created inside AiTC. The) Tj
+T*
+(exercise-creation module can preview the exercise before it is used in training. The person) Tj
+T*
+(creating the exercise can test it and plan the exact traffic picture they want.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. Exercise assistant. During exercise creation, an artificial) Tj
+T*
+(intelligence assistant accepts voice commands and text commands. A creator can ask for a) Tj
+T*
+(number of aircraft on a specific route, or for particular aircraft types. The creator can) Tj
+T*
+(then adjust by hand where the conflicts occur and where the traffic peak is.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. Traffic load. For an exercise, AiTC can show the traffic that flows) Tj
+T*
+(through each sector in that exercise. The creator can see the volume of traffic, or the) Tj
+T*
+(traffic load, in those sectors.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. Aircraft scripts. Inside the exercise-creation module, scripts can) Tj
+T*
+(make aircraft carry out actions by themselves. The aircraft follow the script automatically.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. AI piloting. AiTC can also use scripts for artificial intelligence) Tj
+T*
+(piloting. The aircraft can be piloted by the artificial intelligence, so a human) Tj
+T*
+(pseudo-pilot is not required at the other end of the exercise.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. Replay. Training sessions can be recorded and played back in the) Tj
+T*
+(replay module. The playback is not a video recording and it is not an audio recording. It is) Tj
+T*
+(a scripted recording that reproduces the exercise from the start. Because a script recording) Tj
+T*
+(is a hundred times smaller, and more, than a video recording, a large number of exercises) Tj
+T*
+(can be stored.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 3322 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC product. Voice and video. Voice communication runs in the browser. Users who) Tj
+T*
+(are connected to the same session can use simulated ground-to-air lines and ground-to-ground) Tj
+T*
+(lines. The voice system also supports video calling. In remote training, the instructor can) Tj
+T*
+(see the trainee during the session.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC product. Flight envelope. The aircraft database uses a detailed flight) Tj
+T*
+(envelope for each aircraft. Aircraft speed and altitude are not taken from a simple value) Tj
+T*
+(table. The aircraft in the simulation follows that flight-envelope model. A student can open) Tj
+T*
+(the flight-envelope graphic inside the simulation and see the limitations of the aircraft.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC first contact. Who receives the email. Write to the published institutional) Tj
+T*
+(mailbox for that organisation. Use the email stored on the outreach map. Do not write to a) Tj
+T*
+(named personal mailbox when the directory gives an office, enquiry, or training mailbox. One) Tj
+T*
+(organisation receives one first email.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC first contact. Subject and opening. The subject names AiTC and the) Tj
+T*
+(organisation. The first paragraph says that the sender is AGI Aeronautics and that AiTC is a) Tj
+T*
+(browser air traffic control simulator for radar and tower training. Do not claim that a) Tj
+T*
+(meeting is already arranged. Do not claim that the organisation has already agreed to) Tj
+T*
+(anything.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC first contact. One relevant capability. The second paragraph names one) Tj
+T*
+(capability that matches the recipient. For an academy or university, that can be exercise) Tj
+T*
+(creation, preview, and artificial intelligence piloting so a human pseudo-pilot is not) Tj
+T*
+(required. For an air navigation service, that can be creating their airspace from their own) Tj
+T*
+(files, including an aeronautical information publication, within minutes. Keep the email) Tj
+T*
+(short.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC first contact. The ask. Close by asking for a short conversation about a) Tj
+T*
+(trial. Offer to show radar and tower in the browser, on hardware they already use. Sign the) Tj
+T*
+(message as AGI Aeronautics. The mailbox signature is added when the message is sent from the) Tj
+T*
+(outbox.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC follow-up when there is no reply. Wait several working days after the first) Tj
+T*
+(email. Send one follow-up that refers to the first message and repeats the trial offer in) Tj
+T*
+(fewer words. If there is still no reply, send one second follow-up and then stop. Do not) Tj
+T*
+(write that they asked for a proposal. Do not invent a deadline they agreed to.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC follow-up when they reply. Answer the question they asked. If they ask about) Tj
+T*
+(hardware, say that AiTC runs in the browser and does not depend on a particular operating) Tj
+T*
+(system. If they ask about airspace, say that airspace can be created in the platform from) Tj
+T*
+(their files and that a country airspace can be created within minutes. If they ask about) Tj
+T*
+(instructors in another location, say that the browser voice system includes video, so the) Tj
+T*
+(instructor can see the trainee during a remote session.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 6 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 2426 >>
+stream
+BT
+/F1 10 Tf
+13 TL
+46 760 Td
+(SECTION: AiTC follow-up when they reply. Next step. After answering, offer a trial on a) Tj
+T*
+(sample exercise or on airspace they supply. Say that exercises can be previewed in the) Tj
+T*
+(exercise-creation module, and that artificial intelligence can pilot the aircraft so they do) Tj
+T*
+(not need a person at the other end. If the reply is a refusal, thank them and do not keep) Tj
+T*
+(following up.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC trial. What to show. A trial shows radar and tower in the browser. It shows an) Tj
+T*
+(exercise created in the platform and previewed before it is run. It can show aircraft placed) Tj
+T*
+(by the assistant, then adjusted by hand so the conflict and the traffic peak sit where the) Tj
+T*
+(instructor wants them. It can show the traffic load in each sector of that exercise. It can) Tj
+T*
+(show a scripted replay of the session, which is stored as a script rather than as a video.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC trial. What the organisation needs. The organisation needs a browser and the) Tj
+T*
+(computers it already has. It does not need a dedicated operating system and it does not need) Tj
+T*
+(a human pseudo-pilot for an exercise that uses artificial intelligence piloting. If they) Tj
+T*
+(want their own airspace, they can provide a simulator file, an aeronautical information) Tj
+T*
+(publication, or another file that contains the airspace information.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC pricing. Licence shapes. AiTC is offered as a per-user licence or as an) Tj
+T*
+(organisation licence. A per-user licence is a price for each person who uses the platform.) Tj
+T*
+(An organisation licence is one agreement for an academy, a university, or an air navigation) Tj
+T*
+(service. AGI Aeronautics states the figure in the written proposal for that organisation. Do) Tj
+T*
+(not put a price in an email unless that figure is in the proposal you are sending.) Tj
+T*
+() Tj
+T*
+(SECTION: AiTC pricing. What not to say. Do not quote a network-wide contract as if it were) Tj
+T*
+(the price of one academy purchase. Do not state a simulator vendor, an ATM system, or a) Tj
+T*
+(contact email that is not in the organisation record. Do not say that a country has already) Tj
+T*
+(been contacted unless the correspondence for that location shows a sent message. Do not say) Tj
+T*
+(that a reply has been received unless the correspondence shows a received message.) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 3 0 R >> >> >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000003705 00000 n 
+0000003831 00000 n 
+0000007205 00000 n 
+0000007331 00000 n 
+0000009809 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+9935
+%%EOF

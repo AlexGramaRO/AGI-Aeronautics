@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS "Document" (
     "mimeType" TEXT NOT NULL,
     "charCount" INTEGER NOT NULL,
     "chunkCount" INTEGER NOT NULL,
+    "audience" TEXT NOT NULL DEFAULT 'PUBLIC',
     "uploadedById" TEXT,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT "Document_uploadedById_fkey" FOREIGN KEY ("uploadedById") REFERENCES "User" ("id") ON DELETE SET NULL ON UPDATE CASCADE
